@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class SwitchPreviewService {
-flag : boolean = false;
+flag : boolean = true;
   constructor() { }
 isAuthenticated(){
   this.flag = !this.flag;

@@ -1,3 +1,20 @@
+
+<!-- <div>
+	<mat-form-field>
+	<mat-select placeholder="change region">
+	  <mat-option *ngFor="let region of regions" [value]="region.value">
+		{{region.viewValue}}
+	  </mat-option>
+	</mat-select>
+  </mat-form-field>
+</div> -->
+
+<div >
+	<button class="previous" mat-button (click) = "data.isAuthenticated()"><mat-icon>arrow_back</mat-icon></button>
+	<!-- <a href="#" (click) = "data.isAuthenticated()" class="previous">&laquo; Previous</a> -->
+	
+</div>
+
 <div fxLayout="column"   fxLayoutWrap fxLayoutGap="1.5%" >
 	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
 
@@ -45,7 +62,7 @@
 			<mat-card-content class="fixedheight">
 				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" >
 
-					<mat-card class="faultstyle" style="background:#fcf9db">
+					<mat-card class="faultstyle mat-elevation-z4" style="background:#fcf9db">
 						<mat-card-header>
 							<mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title>
 						</mat-card-header>

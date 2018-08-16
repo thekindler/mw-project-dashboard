@@ -18,7 +18,8 @@
   background: #eee;
 }
 .faultstyle :hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) !important;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  
 }
 .faultstyle{
   width: 15em;
@@ -26,5 +27,11 @@
   font-size: 2em
 }
 .cardstyle{
-  background: #d8dad9
+  background: #f5f5f5
 }
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  margin-bottom: 1em
+}
+

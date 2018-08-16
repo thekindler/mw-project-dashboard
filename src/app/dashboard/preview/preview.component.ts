@@ -10,6 +10,11 @@ export interface Tile {
   text: string;
 }
 
+export interface Region {
+  value: string;
+  viewValue: string;
+}
+
 @Component({
   selector:  'app-preview',
   templateUrl:  './preview.component.html',
@@ -27,6 +32,12 @@ export  class  PreviewComponent  implements  OnInit  {
     this.data.region.subscribe(message  =>  this.region  =  message)
     this.data.pipe.subscribe(message  =>  this.pipe  =  message)
   }
+
+  regions: Region[] = [
+    {value: 'steak-0', viewValue: 'Region 1'},
+    {value: 'pizza-1', viewValue: 'Region 2'},
+    {value: 'tacos-2', viewValue: 'Region 3'}
+  ];
 
   tiles: Tile[] = [
     {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
