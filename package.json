@@ -23,7 +23,10 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "angular-fusioncharts": "^2.0.0",
+    "angular4-fusioncharts": "^1.0.0",
     "core-js": "^2.5.4",
+    "fusioncharts": "^3.13.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

@@ -17,14 +17,15 @@
 .container{
   background: #eee;
 }
-.faultstyle :hover {
-  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-  
-}
+/* .mat-elevation-z4 :hover {
+  box-shadow: 0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12) !important;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+} */
 .faultstyle{
-  width: 15em;
+  width: 20em;
   margin-bottom: 1.5% !important;
-  font-size: 2em
+  /* font-size: 2em */
 }
 .cardstyle{
   background: #f5f5f5
@@ -34,4 +35,10 @@
   color: black;
   margin-bottom: 1em
 }
-
+.fontfault{
+  fon-size : 1em;
+  
+}
+.centerText{
+  text-align: center;
+}

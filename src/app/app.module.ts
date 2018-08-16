@@ -5,12 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FusionChartsComponent} from './FusionCharts/fusioncharts.component';
 //import { AboutComponent } from './about/about.component';
 //import { ReportsComponent } from './reports/reports.component';
 //import { ContactsComponent } from './contacts/contacts.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
+
+//Fusion Charts Dependencies
+import { FusionChartsModule } from 'angular-fusioncharts';
+import FusionCharts from 'fusioncharts/core';
+import Pie3d from 'fusioncharts/viz/pie3d';
+import FusionTheme from 'fusioncharts/themes/es/fusioncharts.theme.fusion';
+
+FusionChartsModule.fcRoot(FusionCharts, Pie3d, FusionTheme);
 
 import {
   MatAutocompleteModule,
@@ -62,6 +71,7 @@ import { SwitchPreviewService } from './dashboard/switch-preview.service';
     DashboardComponent,
     FormComponent,
     PreviewComponent,
+    FusionChartsComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,
@@ -105,7 +115,8 @@ import { SwitchPreviewService } from './dashboard/switch-preview.service';
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-  FlexLayoutModule
+  FlexLayoutModule,
+  FusionChartsModule
   ],
   providers: [SwitchPreviewService],
   bootstrap: [AppComponent]

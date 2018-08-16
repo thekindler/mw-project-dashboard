@@ -10,7 +10,7 @@
 </div> -->
 
 <div >
-	<button class="previous" mat-button (click) = "data.isAuthenticated()"><mat-icon>arrow_back</mat-icon></button>
+	<button class="previous" mat-raised-button (click) = "data.isAuthenticated()"><mat-icon>arrow_back</mat-icon></button>
 	<!-- <a href="#" (click) = "data.isAuthenticated()" class="previous">&laquo; Previous</a> -->
 	
 </div>
@@ -64,7 +64,8 @@
 
 					<mat-card class="faultstyle mat-elevation-z4" style="background:#fcf9db">
 						<mat-card-header>
-							<mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title>
+							<!-- <mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title> -->
+							<p class="">Tree Root Intrusion</p>
 						</mat-card-header>
 						<mat-card-content>
 							<p>Count:</p>
@@ -88,6 +89,7 @@
 							<p>Count:</p>
 						</mat-card-content>
 					</mat-card>
+					<mat-card style="text-align:center;">View Full Report</mat-card>
 
 				</div>
 			</mat-card-content>
@@ -100,10 +102,10 @@
 		<mat-card class="fixedheight cardstyle">
 			<mat-card-header>
 				<!-- <div mat-card-avatar class="example-header-image"></div> -->
-				<mat-card-title>Scaled Map</mat-card-title>
+				<mat-card-title>Pie chart</mat-card-title>
 			</mat-card-header>
 			<mat-card-content class="fixedheight" >
-				<img  class="fixedheight" [src]="'../../assets/images/' +inputMap">
+				<fusion-charts></fusion-charts>
 			</mat-card-content>
 		</mat-card>
 	</div>

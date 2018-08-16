@@ -26,7 +26,7 @@ export  class  PreviewComponent  implements  OnInit  {
   inputMap:String="Blockage_Detection_1_map"
   region:  String;
   pipe:  String;
-  constructor(private  data:  SwitchPreviewService)  {  }
+  constructor(public  data:  SwitchPreviewService)  {  }
 
   ngOnInit()  {
     this.data.region.subscribe(message  =>  this.region  =  message)
