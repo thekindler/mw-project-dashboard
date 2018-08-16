@@ -62,7 +62,7 @@ import {
 import { FormComponent } from './dashboard/form/form.component';
 import { PreviewComponent } from './dashboard/preview/preview.component';
 import { SwitchPreviewService } from './dashboard/switch-preview.service';
-
+import { PACPDialogComponent } from './dashboard/preview/pacpdialog/pacpdialog.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +71,8 @@ import { SwitchPreviewService } from './dashboard/switch-preview.service';
     DashboardComponent,
     FormComponent,
     PreviewComponent,
-    FusionChartsComponent
+    FusionChartsComponent,
+    PACPDialogComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,
@@ -119,6 +120,7 @@ import { SwitchPreviewService } from './dashboard/switch-preview.service';
   FusionChartsModule
   ],
   providers: [SwitchPreviewService],
+  entryComponents: [PACPDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

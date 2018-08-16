@@ -1,14 +1,12 @@
-import  {  Component,  OnInit  }  from  '@angular/core';
+import  {  Component,  OnInit, Inject  }  from  '@angular/core';
 import  {  SwitchPreviewService  }  from  '../switch-preview.service';
 
+import {
+  MatDialog,
+  MatDialogConfig
+} from "@angular/material";
 
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
+import { PACPDialogComponent } from './pacpdialog/pacpdialog.component';
 
 export interface Region {
   value: string;
@@ -21,29 +19,18 @@ export interface Region {
   styleUrls:  ['./preview.component.css']
 })
 export  class  PreviewComponent  implements  OnInit  {
-  inputPipe:String="Blockage_Detection_1"
-  output:String="Blockage_Detection_1"
-  inputMap:String="Blockage_Detection_1_map"
   region:  String;
   pipe:  String;
-  constructor(public  data:  SwitchPreviewService)  {  }
+  constructor(public  data:  SwitchPreviewService, private dialog: MatDialog)  {  }
 
   ngOnInit()  {
     this.data.region.subscribe(message  =>  this.region  =  message)
     this.data.pipe.subscribe(message  =>  this.pipe  =  message)
   }
 
-  regions: Region[] = [
-    {value: 'steak-0', viewValue: 'Region 1'},
-    {value: 'pizza-1', viewValue: 'Region 2'},
-    {value: 'tacos-2', viewValue: 'Region 3'}
-  ];
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    this.dialog.open(PACPDialogComponent, dialogConfig);
+  }
 
-  tiles: Tile[] = [
-    {text: 'One', cols: 1, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 1, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Five', cols: 1, rows: 1, color: '#DDBDF1'},
-  ];
 }

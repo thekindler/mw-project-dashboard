@@ -3,6 +3,7 @@
   <mat-spinner class="spinner" ></mat-spinner>
 </div>
 <div id="pano" *ngIf="resourcesLoaded"></div> <!-- THIS IS THE TRICK -->
+
 <div [ngClass]="{'container' : resourcesLoaded}">
 <div class="test-div">
 <div class="main-div">

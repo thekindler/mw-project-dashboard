@@ -23,14 +23,14 @@ export class FormComponent implements OnInit {
   pipeSelected: any =''; 
   regions: Region[] = [
     {value: 'Region1', viewValue: 'Region1'},
-    {value: 'Region2', viewValue: 'Region2'},
-    {value: 'Region3', viewValue: 'Region3'}
+    {value: 'Region2', viewValue: 'Region2'}
+    // {value: 'Region3', viewValue: 'Region3'}
   ];
 
   pipes: Pipe[] = [
     {value: 'Pipe1', viewValue: 'Pipe1'},
-    {value: 'Pipe2', viewValue: 'Pipe2'},
-    {value: 'Pipe3', viewValue: 'Pipe3'}
+    {value: 'Pipe2', viewValue: 'Pipe2'}
+    // {value: 'Pipe3', viewValue: 'Pipe3'}
   ];
   onSubmit(){
     this.resourcesLoaded = true;

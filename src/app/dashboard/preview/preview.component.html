@@ -25,7 +25,7 @@
 			</mat-card-header>
 			<mat-card-content>
 				<video  class="fixedheight" controls autoplay>
-					<source [src]="'../../../assets/video/input/'+inputPipe" type="video/mp4">
+					<source [src]="'../../../assets/video/input/'+ region + pipe" type="video/mp4">
 				</video>
 			</mat-card-content>
 		</mat-card>
@@ -38,18 +38,17 @@
 
 			<mat-card-content>
 				<video class="fixedheight" controls autoplay>
-					<source [src]="'../../../assets/video/input/'+inputPipe" type="video/mp4">
+					<source [src]="'../../../assets/video/output/'+ region + pipe + '_Output'" type="video/mp4">
 				</video>
 			</mat-card-content>
 		</mat-card>
 
 		<mat-card class="cardstyle">
 			<mat-card-header>
-				<!-- <div mat-card-avatar class="example-header-image"></div> -->
-				<mat-card-title>Scaled Map</mat-card-title>
+				<mat-card-title>Fault Location</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
-				<img class="fixedheight" [src]="'../../../assets/images/Blockage_Detection_1_map'">
+				<img class="fixedheight imgBorder" [src]="'../../../assets/images/'+ region">
 			</mat-card-content>
 		</mat-card>
 	</div>
@@ -63,47 +62,38 @@
 				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" >
 
 					<mat-card class="faultstyle mat-elevation-z4" style="background:#fcf9db">
-						<mat-card-header>
-							<!-- <mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title> -->
-							<p class="">Tree Root Intrusion</p>
+						<mat-card-header style="justify-content: center">
+							<mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title>
 						</mat-card-header>
 						<mat-card-content>
-							<p>Count:</p>
+							<p>Count:1</p>
 						</mat-card-content>
 					</mat-card>
 
 					<mat-card class="faultstyle" style="background:#aaadff">
-						<mat-card-header>
+						<mat-card-header style="justify-content: center">
 							<mat-card-title>Blockage</mat-card-title>
 						</mat-card-header>
 						<mat-card-content>
-							<p>Count:</p>
+							<p>Count:0</p>
 						</mat-card-content>
 					</mat-card>
 
 					<mat-card class="faultstyle" style="background:#a4f9b1">
-						<mat-card-header>
+						<mat-card-header style="justify-content: center">
 							<mat-card-title>Crack Detection</mat-card-title>
 						</mat-card-header>
 						<mat-card-content>
-							<p>Count:</p>
+							<p>Count:0</p>
 						</mat-card-content>
 					</mat-card>
-					<mat-card style="text-align:center;">View Full Report</mat-card>
+					<mat-card style="text-align:center;" (click) = "openDialog()">View Full Report</mat-card>
 
 				</div>
 			</mat-card-content>
 		</mat-card>
 
-		<!-- <mat-card class="cardstyle">
-		  <fusion-chart></fusion-chart>
-		</mat-card> -->
-
-		<mat-card class="fixedheight cardstyle">
-			<mat-card-header>
-				<!-- <div mat-card-avatar class="example-header-image"></div> -->
-				<mat-card-title>Pie chart</mat-card-title>
-			</mat-card-header>
+		<mat-card class="fixedheight cardstyle chartCenter">
 			<mat-card-content class="fixedheight" >
 				<fusion-charts></fusion-charts>
 			</mat-card-content>

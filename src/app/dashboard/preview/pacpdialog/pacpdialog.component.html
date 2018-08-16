@@ -1,0 +1,74 @@
+
+<div style="text-align:center;"><h3>PACP Report</h3></div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="pipelineId" style="padding:2em">
+    <th mat-header-cell *matHeaderCellDef> PipelineId &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.pipelineId}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="distance">
+    <th mat-header-cell *matHeaderCellDef> Distance &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.distance}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="start">
+    <th mat-header-cell *matHeaderCellDef> Start&nbsp; </th>
+    <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="end">
+    <th mat-header-cell *matHeaderCellDef> End &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.end}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="isContinuous">
+    <th mat-header-cell *matHeaderCellDef> IsContinuous &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.isContinuous}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="defectName">
+    <th mat-header-cell *matHeaderCellDef> DefectName &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.defectName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="subDefectName">
+    <th mat-header-cell *matHeaderCellDef> SubDefectName &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.subDefectName}} </td>
+  </ng-container>
+
+<ng-container matColumnDef="inspectionRating">
+    <th mat-header-cell *matHeaderCellDef> InspectionRating &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.inspectionRating}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quickRating">
+    <th mat-header-cell *matHeaderCellDef> QuickRating &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.quickRating}} </td>
+  </ng-container>
+
+    <ng-container matColumnDef="pipeRating">
+    <th mat-header-cell *matHeaderCellDef> PipeRating &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.pipeRating}} </td>
+  </ng-container>
+
+      <ng-container matColumnDef="severity">
+    <th mat-header-cell *matHeaderCellDef> Severity &nbsp;</th>
+    <td mat-cell *matCellDef="let element"> {{element.severity}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
