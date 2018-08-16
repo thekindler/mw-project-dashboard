@@ -1,0 +1,28 @@
+.center{
+  width: 30%;
+  margin: 10px auto;
+}
+
+.main-div{
+  background-image: url('https://www.melbournewater.com.au/sites/default/files/Gradient-home-page-desktop-3.jpg');
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.dashboardstyle{
+  margin:1.5em
+  
+}

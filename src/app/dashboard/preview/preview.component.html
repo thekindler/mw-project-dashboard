@@ -1,0 +1,93 @@
+<div fxLayout="column"   fxLayoutWrap fxLayoutGap="1.5%" >
+	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
+
+		<mat-card class="cardstyle">
+			<mat-card-header>
+				<!-- <div mat-card-avatar class="example-header-image"></div> -->
+				<mat-card-title>Input Video</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<video  class="fixedheight" controls autoplay>
+					<source [src]="'../../../assets/video/input/'+inputPipe" type="video/mp4">
+				</video>
+			</mat-card-content>
+		</mat-card>
+
+		<mat-card class="cardstyle">
+			<mat-card-header>
+				<!-- <div mat-card-avatar class="example-header-image"></div> -->
+				<mat-card-title>Output Video</mat-card-title>
+			</mat-card-header>
+
+			<mat-card-content>
+				<video class="fixedheight" controls autoplay>
+					<source [src]="'../../../assets/video/input/'+inputPipe" type="video/mp4">
+				</video>
+			</mat-card-content>
+		</mat-card>
+
+		<mat-card class="cardstyle">
+			<mat-card-header>
+				<!-- <div mat-card-avatar class="example-header-image"></div> -->
+				<mat-card-title>Scaled Map</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<img class="fixedheight" [src]="'../../../assets/images/Blockage_Detection_1_map'">
+			</mat-card-content>
+		</mat-card>
+	</div>
+
+	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
+		<mat-card class="cardstyle">
+			<mat-card-header>
+				<mat-card-title>Fault Description</mat-card-title>
+			</mat-card-header>
+			<mat-card-content class="fixedheight">
+				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" >
+
+					<mat-card class="faultstyle" style="background:#fcf9db">
+						<mat-card-header>
+							<mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title>
+						</mat-card-header>
+						<mat-card-content>
+							<p>Count:</p>
+						</mat-card-content>
+					</mat-card>
+
+					<mat-card class="faultstyle" style="background:#aaadff">
+						<mat-card-header>
+							<mat-card-title>Blockage</mat-card-title>
+						</mat-card-header>
+						<mat-card-content>
+							<p>Count:</p>
+						</mat-card-content>
+					</mat-card>
+
+					<mat-card class="faultstyle" style="background:#a4f9b1">
+						<mat-card-header>
+							<mat-card-title>Crack Detection</mat-card-title>
+						</mat-card-header>
+						<mat-card-content>
+							<p>Count:</p>
+						</mat-card-content>
+					</mat-card>
+
+				</div>
+			</mat-card-content>
+		</mat-card>
+
+		<!-- <mat-card class="cardstyle">
+		  <fusion-chart></fusion-chart>
+		</mat-card> -->
+
+		<mat-card class="fixedheight cardstyle">
+			<mat-card-header>
+				<!-- <div mat-card-avatar class="example-header-image"></div> -->
+				<mat-card-title>Scaled Map</mat-card-title>
+			</mat-card-header>
+			<mat-card-content class="fixedheight" >
+				<img  class="fixedheight" [src]="'../../assets/images/' +inputMap">
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+.main-body{
+  /* background:linear-gradient(to bottom left,#216e93,#21648a,#1f5881,#172d5b,#191c51); */
+ background:linear-gradient(to bottom left,#78909C,#9E9E9E);
+  position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+}
+
+.fixedheight{
+  height: 100%;
+  width: 100%;
+  max-height: 50em;
+}
+.fixedheight2{
+  height:250;
+  width: 250;
+  max-height: 50em;
+}
+.container{
+  background: #eee;
+}
+.faultstyle :hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) !important;
+}
+.faultstyle{
+  width: 15em;
+  margin-bottom: 1.5% !important;
+  font-size: 2em
+}
+.cardstyle{
+  background: #d8dad9
+}

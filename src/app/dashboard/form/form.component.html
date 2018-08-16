@@ -1,0 +1,39 @@
+
+<div id="spinner" *ngIf="resourcesLoaded">
+  <mat-spinner class="spinner" ></mat-spinner>
+</div>
+<div id="pano" *ngIf="resourcesLoaded"></div> <!-- THIS IS THE TRICK -->
+<div [ngClass]="{'container' : resourcesLoaded}">
+<div class="test-div">
+<div class="main-div">
+  
+  <mat-card class="z-depth center" flex="50" >
+    <div class="example-container">
+    	<mat-form-field>
+		<mat-select placeholder="Select Region" [(value)]="regionSelected" class="region-select" >
+			<mat-option *ngFor="let region of regions" [value]="region.value">
+				{{region.viewValue}}
+			</mat-option>
+		</mat-select>
+    
+	</mat-form-field>
+	<mat-form-field>
+		<mat-select placeholder="Select Pipe" [disabled]="regionSelected === ''  ? true:false" [(value)]="pipeSelected" class="pipe-select" >
+			<mat-option *ngFor="let pipe of pipes" [value]="pipe.value">
+				{{pipe.viewValue}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
+  <button mat-raised-button [disabled]="pipeSelected  === ''  ? true:false" class="submitbutton" (click) = "onSubmit()">Submit</button>
+    </div>
+  </mat-card>
+<!-- <div  class="spinner-div z-depth " flex="50">
+  <mat-spinner class="spinner" *ngIf="resourcesLoaded"></mat-spinner>
+</div> -->
+
+</div>
+</div>
+
+
+</div>
+
