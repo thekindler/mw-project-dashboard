@@ -13,12 +13,19 @@ export interface Region {
   viewValue: string;
 }
 
+
+
 @Component({
   selector:  'app-preview',
   templateUrl:  './preview.component.html',
   styleUrls:  ['./preview.component.css']
 })
 export  class  PreviewComponent  implements  OnInit  {
+  count: any ={'Region1Pipe1':{'treeroot':1,'blockage':0,'crack':0},
+  'Region1Pipe2':{'treeroot':0,'blockage':0,'crack':1},
+  'Region2Pipe1':{'treeroot':0,'blockage':1,'crack':0},
+  'Region2Pipe2':{'treeroot':1,'blockage':0,'crack':0}
+};
   region:  String;
   pipe:  String;
   constructor(public  data:  SwitchPreviewService, private dialog: MatDialog)  {  }

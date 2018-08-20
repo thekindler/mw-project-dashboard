@@ -1,3 +1,8 @@
+
+<div id="spinner" *ngIf="resourceload">
+	<mat-spinner class="spinner" ></mat-spinner>
+  </div>
+<div id="pano" *ngIf="resourceload"></div> 
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
 	<mat-toolbar color="#000000" class="example-toolbar">
 		<button mat-icon-button (click)="snav.toggle()">

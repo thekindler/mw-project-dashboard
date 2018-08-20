@@ -34,9 +34,11 @@ export class FormComponent implements OnInit {
   ];
   onSubmit(){
     this.resourcesLoaded = true;
-    this.myservice.changeMessage(this.regionSelected,this.pipeSelected); 
+    this.myservice.changeMessage(this.regionSelected,this.pipeSelected,true); 
     setTimeout(()=>{ 
       this.myservice.isAuthenticated();
+      
+      this.myservice.changeMessage(this.regionSelected,this.pipeSelected,false); 
     } ,5000);  
   }
   ngOnInit() {

@@ -56,7 +56,7 @@
 	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
 		<mat-card class="cardstyle">
 			<mat-card-header>
-				<mat-card-title>Fault Description</mat-card-title>
+				<mat-card-title>Fault Description: {{" "+pipe}}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content class="fixedheight">
 				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" >
@@ -66,7 +66,7 @@
 							<mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title>
 						</mat-card-header>
 						<mat-card-content>
-							<p>Count:1</p>
+							<p>Count: {{count[region+pipe]["treeroot"]}}</p>
 						</mat-card-content>
 					</mat-card>
 
@@ -75,7 +75,7 @@
 							<mat-card-title>Blockage</mat-card-title>
 						</mat-card-header>
 						<mat-card-content>
-							<p>Count:0</p>
+							<p>Count: {{count[region+pipe]["blockage"]}}</p>
 						</mat-card-content>
 					</mat-card>
 
@@ -84,7 +84,7 @@
 							<mat-card-title>Crack Detection</mat-card-title>
 						</mat-card-header>
 						<mat-card-content>
-							<p>Count:0</p>
+							<p>Count: {{count[region+pipe]["crack"]}}</p>
 						</mat-card-content>
 					</mat-card>
 					<mat-card style="text-align:center;" (click) = "openDialog()">View Full Report</mat-card>
