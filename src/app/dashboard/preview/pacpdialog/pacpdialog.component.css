@@ -1,3 +1,10 @@
 table {
   width: 100%;
 }
+.dialogHeader{
+  padding: 1em;
+}
+.dialogRow{
+  padding: 1em;
+  text-align: center;
+}

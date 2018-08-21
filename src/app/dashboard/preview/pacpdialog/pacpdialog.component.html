@@ -5,62 +5,62 @@
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
-  <ng-container matColumnDef="pipelineId" style="padding:2em">
-    <th mat-header-cell *matHeaderCellDef> PipelineId &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.pipelineId}} </td>
+  <ng-container matColumnDef="pipelineId">
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> PipelineId </th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.pipelineId}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="distance">
-    <th mat-header-cell *matHeaderCellDef> Distance &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.distance}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> Distance</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.distance}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="start">
-    <th mat-header-cell *matHeaderCellDef> Start&nbsp; </th>
-    <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> Start</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.start}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="end">
-    <th mat-header-cell *matHeaderCellDef> End &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.end}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> End</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.end}} </td>
   </ng-container>
 
   <ng-container matColumnDef="isContinuous">
-    <th mat-header-cell *matHeaderCellDef> IsContinuous &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.isContinuous}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> IsContinuous</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.isContinuous}} </td>
   </ng-container>
 
   <ng-container matColumnDef="defectName">
-    <th mat-header-cell *matHeaderCellDef> DefectName &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.defectName}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> DefectName</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.defectName}} </td>
   </ng-container>
 
   <ng-container matColumnDef="subDefectName">
-    <th mat-header-cell *matHeaderCellDef> SubDefectName &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.subDefectName}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> SubDefectName</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.subDefectName}} </td>
   </ng-container>
 
 <ng-container matColumnDef="inspectionRating">
-    <th mat-header-cell *matHeaderCellDef> InspectionRating &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.inspectionRating}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> InspectionRating</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.inspectionRating}} </td>
   </ng-container>
 
   <ng-container matColumnDef="quickRating">
-    <th mat-header-cell *matHeaderCellDef> QuickRating &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.quickRating}} &nbsp;&nbsp;</td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> QuickRating</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.quickRating}} &nbsp;&nbsp;</td>
   </ng-container>
 
     <ng-container matColumnDef="pipeRating">
-    <th mat-header-cell *matHeaderCellDef> PipeRating &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.pipeRating}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> PipeRating</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.pipeRating}} </td>
   </ng-container>
 
       <ng-container matColumnDef="severity">
-    <th mat-header-cell *matHeaderCellDef> Severity &nbsp;</th>
-    <td mat-cell *matCellDef="let element"> {{element.severity}} </td>
+    <th mat-header-cell *matHeaderCellDef class="dialogHeader"> Severity</th>
+    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.severity}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
