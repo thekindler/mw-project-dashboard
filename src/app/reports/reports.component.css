@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    /* gap: 1em; */
+    /* margin: 1em; */
+    flex-wrap: wrap
+}
+.container2{
+    display: flex;
+    /* gap: 1em; */
+    /* margin: 1em; */
+    
+}
+.box1{
+    flex:3;
+    margin: 0.7em;
+}
+.box2{
+    flex:1;
+    margin: 0.7em;
+}
+.box3{
+    flex:1;
+    margin: 0.7em;
+}
+.titlestyle{
+    font-size: 3vh;
+}

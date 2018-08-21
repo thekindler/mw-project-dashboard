@@ -7,9 +7,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FusionChartsComponent} from './FusionCharts/fusioncharts.component';
 //import { AboutComponent } from './about/about.component';
-//import { ReportsComponent } from './reports/reports.component';
+// import { ReportsComponent } from './reports/reports.component';
 //import { ContactsComponent } from './contacts/contacts.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -17,9 +16,11 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FusionChartsModule } from 'angular-fusioncharts';
 import FusionCharts from 'fusioncharts/core';
 import Pie3d from 'fusioncharts/viz/pie3d';
+import Line from 'fusioncharts/viz/line';
+import Doughnut2d from 'fusioncharts/viz/doughnut2d';
 import FusionTheme from 'fusioncharts/themes/es/fusioncharts.theme.fusion';
-
-FusionChartsModule.fcRoot(FusionCharts, Pie3d, FusionTheme);
+import Column2d from 'fusioncharts/viz/column2d';
+FusionChartsModule.fcRoot(FusionCharts, FusionTheme, Pie3d, Line, Doughnut2d, Column2d);
 
 import {
   MatAutocompleteModule,
@@ -63,6 +64,10 @@ import { FormComponent } from './dashboard/form/form.component';
 import { PreviewComponent } from './dashboard/preview/preview.component';
 import { SwitchPreviewService } from './dashboard/switch-preview.service';
 import { PACPDialogComponent } from './dashboard/preview/pacpdialog/pacpdialog.component';
+import { ReportsComponent } from './reports/reports.component';
+import { LineChartComponent } from './reports/linechart/linechart.component';
+import { DonutChartComponent } from './reports/donutchart/donutchart.component';
+import { BarchartComponent } from './reports/barchart/barchart.component';
 
 @NgModule({
   declarations: [
@@ -72,12 +77,17 @@ import { PACPDialogComponent } from './dashboard/preview/pacpdialog/pacpdialog.c
     FormComponent,
     PreviewComponent,
     FusionChartsComponent,
-    PACPDialogComponent
+    PACPDialogComponent,
+    ReportsComponent,
+    LineChartComponent,
+    DonutChartComponent,
+    BarchartComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,
   ],
   imports: [
+    MatDatepickerModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

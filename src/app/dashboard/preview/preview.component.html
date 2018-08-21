@@ -55,39 +55,27 @@
 
 	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
 		<mat-card class="cardstyle">
-			<mat-card-header>
-				<mat-card-title>Fault Description: {{" "+pipe}}</mat-card-title>
+			<mat-card-header style="justify-content:center">
+				<mat-card-title class="faultdesc">Fault Description: {{" "+pipe}}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content class="fixedheight">
 				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" >
 
-					<mat-card class="faultstyle mat-elevation-z4" style="background:#fcf9db">
-						<mat-card-header style="justify-content: center">
-							<mat-card-title class="fontfault">Tree Root Intrusion</mat-card-title>
-						</mat-card-header>
-						<mat-card-content>
-							<p>Count: {{count[region+pipe]["treeroot"]}}</p>
-						</mat-card-content>
+					<mat-card class="faultstyle mat-elevation-z6" style="background:#fcf9db">
+						<span class="fontfault">Tree Root Intrusion</span>
+						<span class="faulltcountstyle">{{count[region+pipe]["treeroot"]}}</span>
 					</mat-card>
 
-					<mat-card class="faultstyle" style="background:#aaadff">
-						<mat-card-header style="justify-content: center">
-							<mat-card-title>Blockage</mat-card-title>
-						</mat-card-header>
-						<mat-card-content>
-							<p>Count: {{count[region+pipe]["blockage"]}}</p>
-						</mat-card-content>
+					<mat-card class="faultstyle mat-elevation-z6" style="background:#aaadff">
+						<span class="fontfault">Blockage</span>
+						<span class="faulltcountstyle">{{count[region+pipe]["blockage"]}}</span>
 					</mat-card>
 
-					<mat-card class="faultstyle" style="background:#a4f9b1">
-						<mat-card-header style="justify-content: center">
-							<mat-card-title>Crack Detection</mat-card-title>
-						</mat-card-header>
-						<mat-card-content>
-							<p>Count: {{count[region+pipe]["crack"]}}</p>
-						</mat-card-content>
+					<mat-card class="faultstyle mat-elevation-z6" style="background:#a4f9b1">
+						<span class="fontfault">Cracks</span>
+						<span class="faulltcountstyle">{{count[region+pipe]["crack"]}}</span>
 					</mat-card>
-					<mat-card style="text-align:center;" (click) = "openDialog()">View Full Report</mat-card>
+					<mat-card class="viewreportstyle" id="viewreport" (click) = "openDialog()">View Full Report</mat-card>
 
 				</div>
 			</mat-card-content>
