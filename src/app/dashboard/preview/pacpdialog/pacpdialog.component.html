@@ -1,6 +1,6 @@
 
 <div style="text-align:center;"><h3>PACP Report</h3></div>
-<table mat-table [dataSource]="datasource" class="mat-elevation-z8">
+<table mat-table [dataSource]="datasource" class="mat-elevation-z8" id="PACPReportTable">
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
@@ -66,7 +66,10 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
+<div class="downloadLink">
+  <!-- <img src = "../../../../assets/images/PDF(1).png"> -->
+  <a href="#" (click)="downloadReport()">Download as PDF</a>
+</div>
 
 
 <!-- Copyright 2018 Google Inc. All Rights Reserved.

@@ -8,3 +8,7 @@ table {
   padding: 1em;
   text-align: center;
 }
+.downloadLink{
+  text-align: right;
+  margin-top: 1em;
+}

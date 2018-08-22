@@ -11,6 +11,9 @@ import { FusionChartsComponent} from './FusionCharts/fusioncharts.component';
 //import { ContactsComponent } from './contacts/contacts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import * as jspdf from 'jspdf';  
+  
+import html2canvas from 'html2canvas';  
 
 //Fusion Charts Dependencies
 import { FusionChartsModule } from 'angular-fusioncharts';
