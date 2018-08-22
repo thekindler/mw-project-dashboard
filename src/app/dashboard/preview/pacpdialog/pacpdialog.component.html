@@ -1,5 +1,6 @@
-
-<div style="text-align:center;"><h3>PACP Report</h3></div>
+<div style="text-align:center;" id="PACPReportHeader">
+  <h3>PACP Report</h3>
+</div>
 <table mat-table [dataSource]="datasource" class="mat-elevation-z8" id="PACPReportTable">
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -7,68 +8,69 @@
   <!-- Position Column -->
   <ng-container matColumnDef="pipelineId">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> PipelineId </th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.pipelineId}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.pipelineId}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="distance">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> Distance</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.distance}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.distance}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="start">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> Start</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.start}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.start}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="end">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> End</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.end}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.end}} </td>
   </ng-container>
 
   <ng-container matColumnDef="isContinuous">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> IsContinuous</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.isContinuous}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.isContinuous}} </td>
   </ng-container>
 
   <ng-container matColumnDef="defectName">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> DefectName</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.defectName}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.defectName}} </td>
   </ng-container>
 
   <ng-container matColumnDef="subDefectName">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> SubDefectName</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.subDefectName}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.subDefectName}} </td>
   </ng-container>
 
-<ng-container matColumnDef="inspectionRating">
+  <ng-container matColumnDef="inspectionRating">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> InspectionRating</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.inspectionRating}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.inspectionRating}} </td>
   </ng-container>
 
   <ng-container matColumnDef="quickRating">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> QuickRating</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.quickRating}} &nbsp;&nbsp;</td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.quickRating}} &nbsp;&nbsp;</td>
   </ng-container>
 
-    <ng-container matColumnDef="pipeRating">
+  <ng-container matColumnDef="pipeRating">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> PipeRating</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.pipeRating}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.pipeRating}} </td>
   </ng-container>
 
-      <ng-container matColumnDef="severity">
+  <ng-container matColumnDef="severity">
     <th mat-header-cell *matHeaderCellDef class="dialogHeader"> Severity</th>
-    <td mat-cell *matCellDef="let element"  class="dialogRow"> {{element.severity}} </td>
+    <td mat-cell *matCellDef="let element" class="dialogRow"> {{element.severity}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
 <div class="downloadLink">
-  <!-- <img src = "../../../../assets/images/PDF(1).png"> -->
-  <a href="#" (click)="downloadReport()">Download as PDF</a>
+  
+  <a href="#" (click)="downloadReport($event)"><img src = "../../../../assets/images/PDFDownload.JPG" class="downloadimg"></a>
 </div>
 
 

@@ -131,7 +131,8 @@ export class PACPDialogComponent implements OnInit {
   
     displayedColumns: string[] = ['pipelineId', 'distance', 'start', 'end', 'isContinuous', 'defectName', 'subDefectName', 'inspectionRating', 'quickRating', 'pipeRating', 'severity'];
 
-    downloadReport(){
+    downloadReport(event: any){
+      event.preventDefault();
       var data = document.getElementById('PACPReportTable');  
       html2canvas(data).then(canvas => {  
       // Few necessary setting options  
@@ -142,9 +143,17 @@ export class PACPDialogComponent implements OnInit {
   
       const contentDataURL = canvas.toDataURL('image/png')  
       let pdf = new jspdf('p', 'mm', 'a4'); // A4 size page of PDF  
-      var position = 0;  
-      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)  
-      pdf.save('MYPdf.pdf'); // Generated PDF   
+      var position = 25;  
+      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
+      pdf.setFontSize(16)
+      pdf.text(90, 10, 'PACP REPORT');
+      pdf.setFontSize(12)
+      pdf.text(5, 20, 'RegionID: ' + this.region);
+      pdf.setFontSize(12)
+      pdf.text(45,20, 'PipeID: '+ this.pipe);  
+      pdf.setFontSize(11)
+      pdf.text(175, 100, 'Signature');  
+      pdf.save('PACPReport.pdf'); // Generated PDF   
     }); 
     }    
 
