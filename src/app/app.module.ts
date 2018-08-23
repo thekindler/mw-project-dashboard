@@ -60,7 +60,7 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule,
+  MatTreeModule
   
 } from '@angular/material';
 import { FormComponent } from './dashboard/form/form.component';
@@ -71,6 +71,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { LineChartComponent } from './reports/linechart/linechart.component';
 import { DonutChartComponent } from './reports/donutchart/donutchart.component';
 import { BarchartComponent } from './reports/barchart/barchart.component';
+import { PACPPageComponent } from './pacppage/pacppage.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { BarchartComponent } from './reports/barchart/barchart.component';
     ReportsComponent,
     LineChartComponent,
     DonutChartComponent,
-    BarchartComponent
+    BarchartComponent,
+    PACPPageComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,

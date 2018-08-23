@@ -30,10 +30,10 @@ export class SidebarComponent implements OnInit, OnDestroy {
   toggleActive(event:any){
     debugger;
     event.preventDefault();
-    var target = event.target || event.srcElement || event.currentTarget;
     if(this.element !== undefined){
       this.element.style.backgroundColor = "white";
-    }
+    } 
+    var target = event.currentTarget;
     target.style.backgroundColor = "#007DC3";
     this.element = target;
   }

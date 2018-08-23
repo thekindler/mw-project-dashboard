@@ -8,7 +8,7 @@
   </mat-form-field>
 </div> -->
 
-<mat-card>
+<mat-card class="modifyCardStyle">
 	<div class="regioncontainer">
 
 		<!-- <a href="#" (click) = "data.isAuthenticated()" class="previous">&laquo; Previous</a> -->
@@ -23,7 +23,7 @@
 			</mat-form-field>
 
 
-			<mat-form-field style="margin-left:1em">
+			<mat-form-field class="selectPipe">
 				<mat-select placeholder="Change Pipe" [disabled]="regionSelected === ''  ? true:false" [(value)]="pipeSelected" class="pipe-select">
 					<mat-option *ngFor="let pipe of pipes" [value]="pipe.value">
 						{{pipe.viewValue}}

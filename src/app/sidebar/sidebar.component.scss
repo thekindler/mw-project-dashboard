@@ -36,10 +36,16 @@
   flex: 1 1 auto;
 }
 
+.example-sidenav-content {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .mat-drawer{
   // background-color: #181745;
       opacity: 0.8;
-       width: 12%;
+      //  width: 12%;
        background:White;
 }
 

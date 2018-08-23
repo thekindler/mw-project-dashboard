@@ -90,5 +90,12 @@
 .submitbutton{
   float:right;
   background-color: #007DC3;
+  margin-top: 1em;
 
+}
+.modifyCardStyle{
+  margin-bottom: 1em;
+}
+.selectPipe{
+  margin-left: 2em;
 }

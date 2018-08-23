@@ -1,33 +1,58 @@
-
 <div id="spinner" *ngIf="resourceload">
-	<mat-spinner class="spinner" ></mat-spinner>
-  </div>
-<div id="pano" *ngIf="resourceload"></div> 
+	<mat-spinner class="spinner"></mat-spinner>
+</div>
+<div id="pano" *ngIf="resourceload"></div>
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
 	<mat-toolbar color="#000000" class="example-toolbar">
-		<button mat-icon-button (click)="snav.toggle()">
-			<mat-icon>menu</mat-icon>
-		</button>
+
 		<h1 class="example-app-name"> Sewage Pipe Analysis System</h1>
 		<span class="example-fill-remaining-space"></span>
-			<!-- <button mat-button><mat-icon>info</mat-icon>&nbsp;About</button>
+		<!-- <button mat-button><mat-icon>info</mat-icon>&nbsp;About</button>
 			<button mat-button><mat-icon>call</mat-icon>&nbsp;Contact</button> -->
 		<mat-icon>person</mat-icon>
 	</mat-toolbar>
 
-	<mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-		<mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" [opened]="true"
-		 fixedTopGap="56">
+	<mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0" autosize>
+		<mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" [opened]="true">
 			<mat-nav-list>
-				<a mat-list-item routerLink="dashboard" id="dashboard" (click)="toggleActive($event)"><mat-icon>dashboard</mat-icon>&nbsp; &nbsp; Dashboard</a>
+				<!-- <mat-list-item>
+						<button mat-icon-button (click)="isExpanded = !isExpanded">
+								<mat-icon>menu</mat-icon>
+							</button>
+				</mat-list-item> -->
+				<a mat-list-item (click)="isExpanded = !isExpanded">
+						<mat-icon mat-list-icon>menu</mat-icon>
+						<p matLine *ngIf="isExpanded">Menu</p>
+					</a>
+				<a mat-list-item routerLink="dashboard" id="dashboard" (click)="toggleActive($event)">
+					<mat-icon mat-list-icon>dashboard</mat-icon>
+					<p matLine *ngIf="isExpanded">Dashboard</p>
+				</a>
+				<a mat-list-item routerLink="reports" (click)="toggleActive($event)">
+					<mat-icon mat-list-icon>trending_up</mat-icon>
+					<p matLine *ngIf="isExpanded">Reports</p>
+				</a>
+				<a mat-list-item routerLink="reports" (click)="toggleActive($event)">
+					<mat-icon mat-list-icon>local_library</mat-icon>
+					<p matLine *ngIf="isExpanded">PACP</p>
+				</a>
+				<a mat-list-item routerLink="reports" (click)="toggleActive($event)">
+					<mat-icon mat-list-icon>info</mat-icon>
+					<p matLine *ngIf="isExpanded">About Us</p>
+				</a>
+				<a mat-list-item routerLink="" (click)="toggleActive($event)">
+					<mat-icon mat-list-icon>call</mat-icon>
+					<p matLine *ngIf="isExpanded">Contact Us</p>
+				</a>
+				<!-- <a mat-list-item routerLink="dashboard" id="dashboard" (click)="toggleActive($event)"><mat-icon>dashboard</mat-icon>&nbsp; &nbsp; Dashboard</a>
 				<a mat-list-item routerLink="reports" (click)="toggleActive($event)"><mat-icon>trending_up</mat-icon>&nbsp; &nbsp; Reports</a>
 				<a mat-list-item routerLink="reports" (click)="toggleActive($event)"><mat-icon>local_library</mat-icon>&nbsp; &nbsp;PACP</a>
 				<a mat-list-item routerLink="reports" (click)="toggleActive($event)"><mat-icon>info</mat-icon>&nbsp; &nbsp;About Us</a>
-				<a mat-list-item routerLink="" (click)="toggleActive($event)"><mat-icon>call</mat-icon>&nbsp; &nbsp;Contact Us</a>
+				<a mat-list-item routerLink="" (click)="toggleActive($event)"><mat-icon>call</mat-icon>&nbsp; &nbsp;Contact Us</a> -->
 			</mat-nav-list>
 		</mat-sidenav>
 
-		<mat-sidenav-content>
+		<mat-sidenav-content class="example-sidenav-content">
 			<router-outlet></router-outlet>
 		</mat-sidenav-content>
 	</mat-sidenav-container>

@@ -75,5 +75,4 @@ resourcesLoaded:boolean = false;
       console.log(this.region)
     } ,5000);   
   }
-
 }
