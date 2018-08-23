@@ -1,10 +1,8 @@
 <div [ngSwitch]="myservice.flag">
-<div *ngSwitchCase="false">                         
-<app-form></app-form>
-</div>
-<div *ngSwitchCase="true" class="dashboardstyle">                         
-<app-preview></app-preview>
-</div>
-</div>
-
-
+    <div *ngSwitchCase="false">
+        <app-form></app-form>
+    </div>
+    <div *ngSwitchCase="true" class="dashboardstyle">
+        <app-preview></app-preview>
+    </div>
+</div>  

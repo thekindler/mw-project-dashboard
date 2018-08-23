@@ -39,17 +39,17 @@
 .mat-drawer{
   // background-color: #181745;
       opacity: 0.8;
-       width: 15%;
-       background:#061838;
+       width: 12%;
+       background:White;
 }
 
 .mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item {
-    color: white;
+    color: black;
 }
 
 
 .mat-toolbar {
-    background: #007DC3;
+    background: #292961;
     color: white;
    
 }
@@ -81,8 +81,7 @@
     z-index:3;
     /* background-color:blue; */
     /* overflow: hidden; */
-
-
-
-
+}
+#dashboard{
+  background-color: #007DC3;
 }

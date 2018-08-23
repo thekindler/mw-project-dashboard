@@ -21,18 +21,20 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.data.resourceload.subscribe(message  =>  this.resourceload  =  message)
+    this.element = document.getElementById("dashboard") as HTMLElement ;
   }
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListner);
 
   }
   toggleActive(event:any){
+    debugger;
     event.preventDefault();
     var target = event.target || event.srcElement || event.currentTarget;
     if(this.element !== undefined){
-      this.element.style.backgroundColor = "#061838";
+      this.element.style.backgroundColor = "white";
     }
-    target.style.backgroundColor = "#444E5F";
+    target.style.backgroundColor = "#007DC3";
     this.element = target;
   }
 

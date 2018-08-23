@@ -1,4 +1,3 @@
-
 <!-- <div>
 	<mat-form-field>
 	<mat-select placeholder="change region">
@@ -9,14 +8,40 @@
   </mat-form-field>
 </div> -->
 
-<div >
-	<button class="previous" mat-raised-button (click) = "data.isAuthenticated()"><mat-icon>arrow_back</mat-icon></button>
-	<!-- <a href="#" (click) = "data.isAuthenticated()" class="previous">&laquo; Previous</a> -->
-	
-</div>
+<mat-card>
+	<div class="regioncontainer">
 
-<div fxLayout="column"   fxLayoutWrap fxLayoutGap="1.5%" >
-	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
+		<!-- <a href="#" (click) = "data.isAuthenticated()" class="previous">&laquo; Previous</a> -->
+
+		<div class="select1">
+			<mat-form-field>
+				<mat-select placeholder="Change Region" [(value)]="regionSelected" class="region-select">
+					<mat-option *ngFor="let region of regions" [value]="region.value">
+						{{region.viewValue}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+
+
+			<mat-form-field style="margin-left:1em">
+				<mat-select placeholder="Change Pipe" [disabled]="regionSelected === ''  ? true:false" [(value)]="pipeSelected" class="pipe-select">
+					<mat-option *ngFor="let pipe of pipes" [value]="pipe.value">
+						{{pipe.viewValue}}
+					</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+
+		<div class="select2">
+			<button mat-raised-button [disabled]="pipeSelected  === ''  ? true:false" class="submitbutton" (click)="onSubmit()">
+				Submit
+			</button>
+		</div>
+	</div>
+</mat-card>
+
+<div fxLayout="column" fxLayoutWrap fxLayoutGap="1.5%">
+	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%">
 
 		<mat-card class="cardstyle">
 			<mat-card-header>
@@ -24,8 +49,8 @@
 				<mat-card-title>Input Video</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
-				<video  class="fixedheight" controls autoplay>
-					<source [src]="'../../../assets/video/input/'+ region + pipe" type="video/mp4">
+				<video class="fixedheight" [src]="'../../../assets/video/input/'+ region + pipe" controls autoplay>
+					<!-- <source  type="video/mp4"> -->
 				</video>
 			</mat-card-content>
 		</mat-card>
@@ -37,8 +62,8 @@
 			</mat-card-header>
 
 			<mat-card-content>
-				<video class="fixedheight" controls autoplay>
-					<source [src]="'../../../assets/video/output/'+ region + pipe + '_Output'" type="video/mp4">
+				<video class="fixedheight" [src]="'../../../assets/video/output/'+ region + pipe + '_Output'" controls autoplay>
+					<!-- <source  type="video/mp4"> -->
 				</video>
 			</mat-card-content>
 		</mat-card>
@@ -53,13 +78,13 @@
 		</mat-card>
 	</div>
 
-	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column"  fxLayoutWrap fxLayoutGap="1.5%" >
+	<div fxLayout="row" fxlayout.md="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%">
 		<mat-card class="cardstyle">
 			<mat-card-header style="justify-content:center">
 				<mat-card-title class="faultdesc">Fault Description: {{" "+pipe}}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content class="fixedheight">
-				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" >
+				<div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%">
 
 					<mat-card class="faultstyle mat-elevation-z6" style="background:#fcf9db">
 						<span class="fontfault">Tree Root Intrusion</span>
@@ -75,14 +100,14 @@
 						<span class="fontfault">Cracks</span>
 						<span class="faulltcountstyle">{{count[region+pipe]["crack"]}}</span>
 					</mat-card>
-					<mat-card class="viewreportstyle" id="viewreport" (click) = "openDialog()">View Full Report</mat-card>
+					<mat-card class="viewreportstyle" id="viewreport" (click)="openDialog()">View Full Report</mat-card>
 
 				</div>
 			</mat-card-content>
 		</mat-card>
 
 		<mat-card class="fixedheight cardstyle chartCenter">
-			<mat-card-content class="fixedheight" >
+			<mat-card-content class="fixedheight">
 				<fusion-charts></fusion-charts>
 			</mat-card-content>
 		</mat-card>
