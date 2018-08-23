@@ -1,0 +1,106 @@
+.main-body{
+  /* background:linear-gradient(to bottom left,#216e93,#21648a,#1f5881,#172d5b,#191c51); */
+ background:linear-gradient(to bottom left,#78909C,#9E9E9E);
+  position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+}
+
+.fixedheight{
+  height: 100%;
+  width: 100%;
+  max-height: 50em;
+}
+.fixedheight2{
+  height:250;
+  width: 250;
+  max-height: 50em;
+}
+.container{
+  background: #eee;
+}
+/* .mat-elevation-z4 :hover {
+  box-shadow: 0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12) !important;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+} */
+.faultstyle{
+  width: 40em;
+  margin-bottom: 1.5% !important;
+  /* font-size: 2em */
+}
+.cardstyle{
+  background: #f5f5f5
+}
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+  margin-bottom: 1em
+}
+.fontfault{
+  font-size : 3vh;
+  
+}
+.centerText{
+  text-align: center;
+}
+.chartCenter{
+  justify-content: center;
+  display: grid;
+}
+.imgBorder{
+  border: solid;
+  border-width: .25em;
+}
+.fontstyle{
+  font-family:  "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+  font-size: 1.5vw;
+  font-weight:150;
+ }
+
+ #viewreport
+ {
+  background-color: #c5c7c5;
+ }
+
+ #viewreport:hover
+ {
+  background-color: #b9bbb9;
+ }
+ .faulltcountstyle{
+  float: right;
+  font-size: 4vh;
+ }
+ .faultdesc{
+  font-weight: 500;
+  font-size: 3vh;
+ }
+ .viewreportstyle{
+  text-align: center;
+  font-size: 2.5vh !important;
+  font-weight: 450 !important;
+ }
+ .regioncontainer{
+   display: flex;
+ }
+ .select1{
+   flex:3;
+ }
+ .select3{
+  flex:1;
+}
+.submitbutton{
+  float:right;
+  background-color: #007DC3;
+
+}
+.chart{
+  display: flex;
+  flex:2;
+}
+.select2{
+  display: flex;
+  flex:1;
+  margin-right: 1em;
+}
+.regionModify{
+  margin-bottom: 1em;
+}

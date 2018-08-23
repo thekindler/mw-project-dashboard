@@ -16,7 +16,9 @@ export class LineChartComponent {
     "subcaption": "[2005-2018]",
     "rotatelabels": "1",
     "setadaptiveymin": "1",
-    "theme": "fusion"
+    "theme": "fusion",
+    "paletteColors": "#F16C51",
+    "baseFontColor": "#333333"
   },
   "data": [
     {

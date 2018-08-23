@@ -25,3 +25,32 @@
 .titlestyle{
     font-size: 3vh;
 }
+.faultImg{
+    width: 4em;
+    margin-top: .7em;
+}
+.crackCard{
+    background-color: blueviolet;
+}
+.blockCard{
+    background-color: #00B28F;
+}
+.treeRootCard{
+    background-color: #ff9800
+}
+.severeCard{
+    background-color: #F16C51;
+}
+.faultCount{
+    float: right;
+    font-size: 8vh; 
+    margin-top: .8em;
+    font-family: roboto-light;
+    color: #FFFFFF;
+}
+.faultType{
+    float:right; 
+    font-size: 2.5vh;
+    font-family: MYRIAD PRO - SEMIBOLD;
+    color: #FFFFFF;
+}
