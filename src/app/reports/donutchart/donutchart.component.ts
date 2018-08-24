@@ -20,12 +20,13 @@ export class DonutChartComponent {
 "decimals": "1",
 "plottooltext": "<b>$label</b> is <b>$percentValue</b> severe",
 "centerlabel": "# Severe Faults: $value",
+"palettecolors":"00B28F,DF9926,F16C51",
 "theme": "fusion"
 },
 "data": [
 {
   "label": "Region 1",
-  "value": "10"
+  "value": "10",
 },
 {
   "label": "Region 2",

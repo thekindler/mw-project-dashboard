@@ -26,8 +26,10 @@ export class BarchartComponent {
     {value: 'Region2', viewValue: 'Region2'}
     // {value: 'Region3', viewValue: 'Region3'}
   ];
-  fault: any = {Region1:'125',Region2:'362'
-    // {value: 'Region3', viewValue: 'Region3'}
+  fault: any = {
+    Region1:{Treeroot:15,Cracks:25,Blockage:10},
+    Region2:{Treeroot:17,Cracks:15,Blockage:13}
+
   };
   
   ngOnInit() {
@@ -44,48 +46,28 @@ export class BarchartComponent {
         "xaxisname": "Faults types",
         "yaxisname": "Faults",
         "numbersuffix": "",
-        "theme": "fusion"
+        "theme": "fusion",
+        
       },
       "data": [
         {
           "label": "Tree Roots",
-          "value": this.fault[this.regionbar][0]
+          "value": this.fault[this.regionbar]["Treeroot"],
+          "color": "#DF9926"
         },
         {
           "label": "Cracks",
-          "value": this.fault[this.regionbar][1]
+          "value": this.fault[this.regionbar]["Cracks"],
+          "color": "#963596"
         }
         ,
         {
           "label": "Blockage",
-          "value": this.fault[this.regionbar][2]
+          "value": this.fault[this.regionbar]["Blockage"],
+          "color": "#00B28F"
         }
-        // ,
-        // {
-        //   "label": "Iran",
-        //   "value": "140"
-        // },
-        // {
-        //   "label": "Russia",
-        //   "value": "115"
-        // },
-        // {
-        //   "label": "UAE",
-        //   "value": "100"
-        // },
-        // {
-        //   "label": "US",
-        //   "value": "30"
-        // },
-        // {
-        //   "label": "China",
-        //   "value": "30"
-        // }
-      ]
-    
-    
+      ]   
     }
-    
 }
 
       dataSource = {
@@ -95,43 +77,26 @@ export class BarchartComponent {
     "xaxisname": "Faults types",
     "yaxisname": "Faults",
     "numbersuffix": "",
-    "theme": "fusion"
+    "theme": "fusion",
   },
   "data": [
     {
       "label": "Tree Roots",
-      "value":  this.fault[this.regionbar][0]
+      "value":  this.fault[this.regionbar]["Treeroot"],
+      "color": "#DF9926"
     },
     {
       "label": "Cracks",
-      "value":  this.fault[this.regionbar][1]
+      "value":  this.fault[this.regionbar]["Cracks"],
+      "color": "#963596"
+
     }
     ,
     {
       "label": "Blockage",
-      "value":  this.fault[this.regionbar][2]
+      "value":  this.fault[this.regionbar]["Blockage"],
+      "color": "#00B28F"
     }
-    // ,
-    // {
-    //   "label": "Iran",
-    //   "value": "140"
-    // },
-    // {
-    //   "label": "Russia",
-    //   "value": "115"
-    // },
-    // {
-    //   "label": "UAE",
-    //   "value": "100"
-    // },
-    // {
-    //   "label": "US",
-    //   "value": "30"
-    // },
-    // {
-    //   "label": "China",
-    //   "value": "30"
-    // }
   ]
 
 

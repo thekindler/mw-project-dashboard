@@ -31,7 +31,8 @@ export class FusionChartsComponent {
         "showPercentInTooltip": "0",
         "numberPrefix": "",
         "enableMultiSlicing": "1",
-        "theme": "fusion"
+        "theme": "fusion",
+        "palettecolors":"00B28F,DF9926,F16C51",
       },
       "data": [{
         "label": "Tree Root Intrussion",

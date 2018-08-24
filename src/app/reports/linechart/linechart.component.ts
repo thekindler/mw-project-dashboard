@@ -23,59 +23,59 @@ export class LineChartComponent {
   "data": [
     {
       "label": "2005",
-      "value": "5"
+      "value": "50"
     },
     {
       "label": "2006",
-      "value": "6"
+      "value": "30"
     },
     {
       "label": "2007",
-      "value": "2"
+      "value": "25"
     },
     {
       "label": "2008",
-      "value": "9"
+      "value": "92"
     },
     {
       "label": "2009",
-      "value": "4"
+      "value": "55"
     },
     {
       "label": "2010",
-      "value": "10"
+      "value": "69"
     },
     {
       "label": "2011",
-      "value": "15"
+      "value": "49"
     },
     {
       "label": "2012",
-      "value": "3"
+      "value": "20"
     },
     {
       "label": "2013",
-      "value": "13"
+      "value": "45"
     },
     {
       "label": "2014",
-      "value": "7"
+      "value": "30"
     },
     {
       "label": "2015",
-      "value": "8"
+      "value": "50"
     },
     {
       "label": "2016",
-      "value": "6"
+      "value": "60"
     },
     {
         "label": "2017",
-        "value": "11"
+        "value": "80"
     },
     {
         "label": "2018",
-        "value": "10"
+        "value": "95"
     }
   ]
 }

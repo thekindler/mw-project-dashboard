@@ -73,8 +73,9 @@
   
  }
  .faultdesc{
-  font-weight: 500;
+  font-weight: 700;
   font-size: 3vh;
+  font-family: "MYRIAD PRO";
  }
  .viewreportstyle{
   text-align: center;
@@ -113,5 +114,10 @@
 
 .regionModify{
   margin-bottom: 1em;
+}
+.textFont{
+  font-family: "MYRIAD PRO";
+  font-weight: bold;
+  font-size: 2.5vh;
 }
 
