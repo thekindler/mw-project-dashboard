@@ -6,7 +6,7 @@
 
   <div class="box2">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Choose Start date">
+      <input matInput [matDatepicker]="picker" placeholder="Choose Start date" [formControl]="date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -63,7 +63,7 @@
     </span>
     <span class="faultCount">20</span>
     <br/>
-    <span class="faultType">Severe Faults</span>
+    <span style="float:right; font-size: 2.5vh;">Severe Faults</span>
   </mat-card>
 </div>
 

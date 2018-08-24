@@ -38,7 +38,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.element = target;
   }
   switchHome(){
-    debugger;
+    //debugger;
     if(this.data.flag == true){
       this.data.isAuthenticated();
     }

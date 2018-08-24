@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -61,6 +61,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule
+  
   
 } from '@angular/material';
 import { FormComponent } from './dashboard/form/form.component';
@@ -132,7 +133,10 @@ import { PACPPageComponent } from './pacppage/pacppage.component';
   MatTooltipModule,
   MatTreeModule,
   FlexLayoutModule,
-  FusionChartsModule
+  FusionChartsModule,
+  FormsModule,
+  ReactiveFormsModule,
+
   ],
   providers: [SwitchPreviewService],
   entryComponents: [PACPDialogComponent],
