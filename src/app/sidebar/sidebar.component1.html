@@ -21,27 +21,51 @@
 							</button>
 				</mat-list-item> -->
 				<a mat-list-item (click)="isExpanded = !isExpanded">
-						<mat-icon mat-list-icon>menu</mat-icon>
-						<p matLine *ngIf="isExpanded">Menu</p>
-					</a>
+					<mat-icon mat-list-icon>
+						<i class="material-icons icons" class="sidenavicon">
+							<img src="../../../assets/images/menu_default.svg">
+						</i>
+					</mat-icon>
+					<p matLine *ngIf="isExpanded">Menu</p>
+				</a>
 				<a mat-list-item routerLink="dashboard" id="dashboard" (click)="toggleActive($event)">
-					<mat-icon mat-list-icon>dashboard</mat-icon>
+					<mat-icon mat-list-icon>
+						<i class="material-icons icons" class="sidenavicon">
+							<img src="../../../assets/images/dashboard_default.svg">
+						</i>
+					</mat-icon>
 					<p matLine *ngIf="isExpanded">Dashboard</p>
 				</a>
 				<a mat-list-item routerLink="reports" (click)="toggleActive($event)">
-					<mat-icon mat-list-icon>trending_up</mat-icon>
+					<mat-icon mat-list-icon>
+						<i class="material-icons icons" class="sidenavicon">
+							<img src="../../../assets/images/reports_default.svg">
+						</i>
+					</mat-icon>
 					<p matLine *ngIf="isExpanded">Reports</p>
 				</a>
 				<a mat-list-item routerLink="reports" (click)="toggleActive($event)">
-					<mat-icon mat-list-icon>local_library</mat-icon>
+					<mat-icon mat-list-icon>
+						<i class="material-icons icons" class="sidenavicon">
+							<img src="../../../assets/images/pacp_default.svg">
+						</i>
+					</mat-icon>
 					<p matLine *ngIf="isExpanded">PACP</p>
 				</a>
 				<a mat-list-item routerLink="reports" (click)="toggleActive($event)">
-					<mat-icon mat-list-icon>info</mat-icon>
+					<mat-icon mat-list-icon>
+						<i class="material-icons icons" class="sidenavicon">
+							<img src="../../../assets/images/about_us_default.svg">
+						</i>
+					</mat-icon>
 					<p matLine *ngIf="isExpanded">About Us</p>
 				</a>
 				<a mat-list-item routerLink="" (click)="toggleActive($event)">
-					<mat-icon mat-list-icon>call</mat-icon>
+					<mat-icon mat-list-icon>
+						<i class="material-icons icons" class="sidenavicon">
+							<img src="../../../assets/images/contact_default.svg">
+						</i>
+					</mat-icon>
 					<p matLine *ngIf="isExpanded">Contact Us</p>
 				</a>
 				<!-- <a mat-list-item routerLink="dashboard" id="dashboard" (click)="toggleActive($event)"><mat-icon>dashboard</mat-icon>&nbsp; &nbsp; Dashboard</a>

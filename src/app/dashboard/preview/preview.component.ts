@@ -26,8 +26,8 @@ export interface Pipe {
 
 @Component({
   selector:  'app-preview',
-  templateUrl:  './preview.component.html',
-  styleUrls:  ['./preview.component.css']
+  templateUrl:  './preview1.component.html',
+  styleUrls:  ['./preview1.component.css']
 })
 export  class  PreviewComponent  implements  OnInit  {
   count: any ={'Region1Pipe1':{'treeroot':1,'blockage':0,'crack':0},

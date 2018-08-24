@@ -80,7 +80,7 @@
   text-align: center;
   font-size: 2.5vh !important;
   font-weight: 450 !important;
-  background-color: #007DC3;
+  background-color: #007DC3 !important;
  }
  .regioncontainer{
    display: flex;
@@ -103,6 +103,7 @@
 .submitbutton{
   float:right;
   background-color: #007DC3;
+  margin-top: .7em;
 
 }
 .chart{

@@ -6,7 +6,7 @@
 
 .test-div
 {
- background-image: url('https://www.melbournewater.com.au/sites/default/files/Gradient-home-page-desktop-3.jpg');
+ background-image: url('../../../assets/images/background_color.png');
  background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

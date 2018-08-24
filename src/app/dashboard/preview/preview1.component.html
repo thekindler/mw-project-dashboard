@@ -77,26 +77,32 @@
 				<mat-card-header style="justify-content:center">
 					<mat-card-title class="faultdesc">Fault Description: {{" "+pipe}}</mat-card-title>
 				</mat-card-header>
-				<mat-card-content >
+				<mat-card-content>
 					<!-- <div fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%"> -->
-						<mat-list class="fullwidth">
-							<mat-list-item style="display:flex">
-								<span class="fontfault" style="display:flex;flex: 1">Tree Root Intrusion</span>
-								<span class="faulltcountstyle"  style="display:flex;flex: 3" >{{count[region+pipe]["treeroot"]}}</span>
-								<mat-divider></mat-divider>
-							</mat-list-item>
-							<mat-list-item>
-								<span class="fontfault">Blockage</span>
-								<span class="faulltcountstyle">{{count[region+pipe]["blockage"]}}</span>
-								<mat-divider></mat-divider>
-							</mat-list-item>
-							<mat-list-item>
-								<span class="fontfault">Cracks</span>
-								<span class="faulltcountstyle">{{count[region+pipe]["crack"]}}</span>
-								<mat-divider></mat-divider>
-							</mat-list-item>
-						</mat-list>
-						<mat-card class="viewreportstyle" id="viewreport" (click)="openDialog()">View Full Report</mat-card>
+					<mat-list class="fullwidth">
+						<mat-list-item>
+							<span matLine class="fontfault">Tree Root Intrusion</span>
+							<div>
+								<span matLine class="faulltcountstyle">{{count[region+pipe]["treeroot"]}}</span>
+							</div>
+							<mat-divider></mat-divider>
+						</mat-list-item>
+						<mat-list-item>
+							<span matLine class="fontfault">Blockage</span>
+							<div>
+								<span matLine class="faulltcountstyle">{{count[region+pipe]["blockage"]}}</span>
+							</div>
+							<mat-divider></mat-divider>
+						</mat-list-item>
+						<mat-list-item>
+							<span matLine class="fontfault">Cracks</span>
+							<div>
+								<span matLine class="faulltcountstyle">{{count[region+pipe]["crack"]}}</span>
+							</div>
+							<mat-divider></mat-divider>
+						</mat-list-item>
+					</mat-list>
+					<mat-card class="viewreportstyle" id="viewreport" (click)="openDialog()">View Full Report</mat-card>
 					<!-- </div> -->
 				</mat-card-content>
 			</mat-card>
