@@ -43,13 +43,13 @@
 
 .submitbutton
 {
-  background-color: #558B2F;
-  opacity :0.9;
+  background-color: #007DC3;
+  opacity :0.7;
 }
 
 .submitbutton:hover:enabled
 {
-  background-color: #33691E;
+  background-color:  #007DC3;
   opacity :0.9;
 }
 .mat-list-text
@@ -115,3 +115,4 @@ width: 10%;
 {
   color:green;
 }
+

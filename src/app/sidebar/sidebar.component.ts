@@ -37,5 +37,11 @@ export class SidebarComponent implements OnInit, OnDestroy {
     target.style.backgroundColor = "#007DC3";
     this.element = target;
   }
+  switchHome(){
+    debugger;
+    if(this.data.flag == true){
+      this.data.isAuthenticated();
+    }
+  }
 
 }
