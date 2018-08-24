@@ -6,7 +6,7 @@
 
   <div class="box2">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Choose Start date" [formControl]="date">
+      <input matInput [matDatepicker]="picker" placeholder="Choose Start date" [formControl]="prevDate">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -14,7 +14,7 @@
 
   <div class="box3">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker1" placeholder="Choose End date">
+      <input matInput [matDatepicker]="picker1" placeholder="Choose End date" [formControl]="date">
       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
     </mat-form-field>

@@ -8,7 +8,12 @@ import {FormControl} from '@angular/forms';
 export class ReportsComponent implements OnInit {
 
   date = new FormControl(new Date());
-  constructor() { }
+  datePrevious = new Date();
+  prevDate: any;
+  constructor() { 
+    this.datePrevious.setFullYear(this.datePrevious.getFullYear() - 1);
+    this.prevDate = new FormControl(this.datePrevious);
+  }
 
   ngOnInit() {
   }

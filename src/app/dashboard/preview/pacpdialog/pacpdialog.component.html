@@ -1,6 +1,8 @@
 <div style="text-align:center;" id="PACPReportHeader">
   <h3 style="float: left;">PACP Report</h3>
-  <button style="float: right; " mat-icon-button [mat-dialog-close]="">Close</button>
+  <button style="float: right; background-color: white; " mat-icon-button [mat-dialog-close]=""><i class="material-icons icons" >
+    <img class="closeIcon" src="../../../assets/images/close.svg">
+  </i></button>
 </div>
 <table mat-table [dataSource]="datasource" class="mat-elevation-z8" id="PACPReportTable">
   <!--- Note that these columns can be defined in any order.

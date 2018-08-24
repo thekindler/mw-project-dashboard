@@ -128,7 +128,7 @@ export class PACPDialogComponent implements OnInit {
 
     this.datasource = ELEMENT_DATA[this.region+this.pipe];
   }
-  
+
     displayedColumns: string[] = ['pipelineId', 'distance', 'start', 'end', 'isContinuous', 'defectName', 'subDefectName', 'inspectionRating', 'quickRating', 'pipeRating', 'severity'];
 
     downloadReport(event: any){
