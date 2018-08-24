@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
       templateUrl: './linechart.component.html' /* see HTML tab */
 })
 export class LineChartComponent {
-      width = 1050;
-      height = 400;
+      width = "90%";
+      // height = 400;
       type = 'line';
       dataFormat = 'json';
       dataSource = {

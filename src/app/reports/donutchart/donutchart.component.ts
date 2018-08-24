@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
       templateUrl: './donutchart.component.html' /* see HTML tab */
 })
 export class DonutChartComponent {
-  width = 500;
+  width = "100%";
   height = 400;
   type = 'doughnut2d';
   dataFormat = 'json';

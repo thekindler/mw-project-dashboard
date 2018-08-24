@@ -1,5 +1,5 @@
 
-    
+    <div>
     	<mat-form-field>
 		<mat-select placeholder="Select Region" [(value)]="regionbar" class="region-select" (selectionChange)="onChangedrop($event)">
 			<mat-option *ngFor="let region of regions" [value]="region.value">
@@ -14,3 +14,4 @@
     [dataFormat]="dataFormat"
     [dataSource]="dataSource">
 </fusioncharts>
+</div>

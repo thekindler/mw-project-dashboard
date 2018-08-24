@@ -15,7 +15,7 @@
     margin: 0.7em;
 }
 .box2{
-    flex:1;
+    flex:1 !important;
     margin: 0.7em;
 }
 .box3{

@@ -46,7 +46,7 @@ export class BarchartComponent {
         "xaxisname": "Faults types",
         "yaxisname": "Faults",
         "numbersuffix": "",
-        "theme": "fusion",
+        "theme": "fusion"
         
       },
       "data": [
@@ -77,7 +77,7 @@ export class BarchartComponent {
     "xaxisname": "Faults types",
     "yaxisname": "Faults",
     "numbersuffix": "",
-    "theme": "fusion",
+    "theme": "fusion"
   },
   "data": [
     {
