@@ -7,13 +7,15 @@
 .fixedheight{
   height: 100%;
   width: 100%;
-  max-height: 50em;
+}
+.fullwidth{
+  width: 100%;
 }
 .fixedheight2{
   height:250;
   width: 250;
   max-height: 50em;
-}
+} 
 .container{
   background: #eee;
 }
@@ -44,7 +46,7 @@
 }
 .chartCenter{
   justify-content: center;
-  display: grid;
+  display: flex;
 }
 .imgBorder{
   border: solid;
@@ -66,8 +68,9 @@
   background-color: #b9bbb9;
  }
  .faulltcountstyle{
-  float: right;
+  float: right !important;
   font-size: 4vh;
+  
  }
  .faultdesc{
   font-weight: 500;
@@ -77,6 +80,7 @@
   text-align: center;
   font-size: 2.5vh !important;
   font-weight: 450 !important;
+  background-color: #007DC3;
  }
  .regioncontainer{
    display: flex;
@@ -84,8 +88,17 @@
  .select1{
    flex:3;
  }
+ .select2{
+  display: flex;
+  flex:1;
+  margin-right: 1em;
+}
  .select3{
   flex:1;
+}
+.select4{
+  display: flex;
+  flex:2;
 }
 .submitbutton{
   float:right;
@@ -96,11 +109,8 @@
   display: flex;
   flex:2;
 }
-.select2{
-  display: flex;
-  flex:1;
-  margin-right: 1em;
-}
+
 .regionModify{
   margin-bottom: 1em;
 }
+
