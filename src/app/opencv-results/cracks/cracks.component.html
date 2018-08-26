@@ -1,0 +1,19 @@
+<div class="image-container">
+
+  <mat-card class="image-card" *ngFor="let image of cracks_images">
+    <mat-card-content >
+      <img id="input_image" [src]="image.location" (click)="showProcessesOutput(image.imageId)">
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
+<div *ngIf="input_selected" class="image-output-container">
+
+  <mat-card class="image-card">
+    <mat-card-content>
+      <img [src]="current_selection_output">
+    </mat-card-content>
+  </mat-card>
+
+</div>

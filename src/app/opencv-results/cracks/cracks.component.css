@@ -1,0 +1,25 @@
+.image-container{
+    display: flex;
+    margin: 0.9em;
+    flex-wrap: wrap
+}
+.image-card{
+    flex: 1;
+    display: flex;
+    margin:0.3em;
+    align-content: center
+}
+.image-output-container{
+    display: flex;
+    margin: 0.9em
+}
+.mat-card img{
+    object-fit: cover; /*this makes de image in src fit to the size of specified below*/
+    width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 100%;
+
+  }
+  mat-card:hover{
+    background-color: #b9bbbb;
+    transform: scale(1.1); 
+  }

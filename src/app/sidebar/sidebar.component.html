@@ -5,7 +5,7 @@
 	<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
 		<mat-toolbar color="#000000" class="example-toolbar">
 			<a routerLink="">
-			<img class="example-app-name" (click)="switchHome()" src="../../assets/images/Logo.jpg" />
+			<img class="example-app-name" (click)="switchHome()" src="../../assets/images/logo.png" />
 			</a>
 			<span class="example-fill-remaining-space"></span>
 			<!-- <button mat-button><mat-icon>info</mat-icon>&nbsp;About</button>
@@ -53,13 +53,13 @@
 						</mat-icon>
 						<p matLine *ngIf="isExpanded">PACP</p>
 					</a>
-					<a mat-list-item routerLink="sdf" (click)="toggleActive($event)">
+					<a mat-list-item routerLink="opencvresults" (click)="toggleActive($event)">
 						<mat-icon mat-list-icon>
 							<i class="material-icons icons" class="sidenavicon">
 								<img src="../../../assets/images/about_us_default.svg">
 							</i>
 						</mat-icon>
-						<p matLine *ngIf="isExpanded">About Us</p>
+						<p matLine *ngIf="isExpanded">OpenCV Results</p>
 					</a>
 					<a mat-list-item routerLink="sdf" (click)="toggleActive($event)">
 						<mat-icon mat-list-icon>

@@ -72,6 +72,10 @@ import { ReportsComponent } from './reports/reports.component';
 import { LineChartComponent } from './reports/linechart/linechart.component';
 import { DonutChartComponent } from './reports/donutchart/donutchart.component';
 import { BarchartComponent } from './reports/barchart/barchart.component';
+import { OpencvResultsComponent } from './opencv-results/opencv-results.component';
+import { BlockageComponent } from './opencv-results/blockage/blockage.component';
+import { TreeRootIntrusionsComponent } from './opencv-results/tree-root-intrusions/tree-root-intrusions.component';
+import { CracksComponent } from './opencv-results/cracks/cracks.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +89,11 @@ import { BarchartComponent } from './reports/barchart/barchart.component';
     ReportsComponent,
     LineChartComponent,
     DonutChartComponent,
-    BarchartComponent
+    BarchartComponent,
+    OpencvResultsComponent,
+    BlockageComponent,
+    TreeRootIntrusionsComponent,
+    CracksComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,
