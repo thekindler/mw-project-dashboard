@@ -36,7 +36,7 @@
 			<button mat-raised-button [disabled]="pipeSelected  === ''  ? true:false" class="submitbutton" (click)="onSubmit()">
 				Submit
 			</button>
-		</div>
+		</div> 
 	</div>
 </mat-card>
 
@@ -49,7 +49,7 @@
 				<mat-card-title>Input Video</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
-				<video class="fixedheight" [src]="'../../../assets/video/input/'+ region + pipe" controls autoplay>
+				<video class="fixedheight" src="" controls autoplay>
 					<!-- <source  type="video/mp4"> -->
 				</video>
 			</mat-card-content>
@@ -62,7 +62,7 @@
 			</mat-card-header>
 
 			<mat-card-content>
-				<video class="fixedheight" [src]="'../../../assets/video/output/'+ region + pipe + '_Output'" controls autoplay>
+				<video class="fixedheight" src="" controls autoplay>
 					<!-- <source  type="video/mp4"> -->
 				</video>
 			</mat-card-content>

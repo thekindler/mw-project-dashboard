@@ -35,7 +35,7 @@
 					<mat-card-title class="textFont">Input Video</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<video class="fixedheight" [src]="'../../../assets/video/input/'+ region + pipe" controls autoplay>
+					<video class="fixedheight" src="http://0.0.0.0:5000/input_video_feed" controls autoplay>
 						<!-- <source  type="video/mp4"> -->
 					</video>
 				</mat-card-content>
@@ -50,7 +50,7 @@
 				</mat-card-header>
 
 				<mat-card-content>
-					<video class="fixedheight" [src]="'../../../assets/video/output/'+ region + pipe + '_Output'" controls autoplay>
+					<video class="fixedheight" src="http://0.0.0.0:5000/output_video_feed" controls autoplay>
 						<!-- <source  type="video/mp4"> -->
 					</video>
 				</mat-card-content>

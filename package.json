@@ -29,6 +29,7 @@
     "fusioncharts": "^3.13.1",
     "html2canvas": "^1.0.0-alpha.12",
     "jspdf": "^1.4.1",
+    "node-sass": "^4.9.3",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

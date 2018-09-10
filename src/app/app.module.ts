@@ -11,6 +11,7 @@ import { FusionChartsComponent} from './FusionCharts/fusioncharts.component';
 //import { ContactsComponent } from './contacts/contacts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { HttpClientModule } from '@angular/common/http';
 import * as jspdf from 'jspdf';  
   
 import html2canvas from 'html2canvas';  
@@ -99,6 +100,7 @@ import { CracksComponent } from './opencv-results/cracks/cracks.component';
     // ContactsComponent,
   ],
   imports: [
+    HttpClientModule,
     MatDatepickerModule,
     BrowserModule,
     BrowserAnimationsModule,
