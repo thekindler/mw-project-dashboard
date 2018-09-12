@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FusionChartsComponent} from './FusionCharts/fusioncharts.component';
+
 //import { AboutComponent } from './about/about.component';
 // import { ReportsComponent } from './reports/reports.component';
 //import { ContactsComponent } from './contacts/contacts.component';
@@ -77,6 +78,7 @@ import { OpencvResultsComponent } from './opencv-results/opencv-results.componen
 import { BlockageComponent } from './opencv-results/blockage/blockage.component';
 import { TreeRootIntrusionsComponent } from './opencv-results/tree-root-intrusions/tree-root-intrusions.component';
 import { CracksComponent } from './opencv-results/cracks/cracks.component';
+import {JointsComponent} from './opencv-results/joints/joints.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +96,8 @@ import { CracksComponent } from './opencv-results/cracks/cracks.component';
     OpencvResultsComponent,
     BlockageComponent,
     TreeRootIntrusionsComponent,
-    CracksComponent
+    CracksComponent,
+    JointsComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,

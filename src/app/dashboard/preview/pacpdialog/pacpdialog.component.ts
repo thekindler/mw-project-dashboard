@@ -102,6 +102,38 @@ const ELEMENT_DATA: any = {'Region1Pipe1':[{
   'imageRef': 'NA',
   'Remarks': 'Tree Root'
 }],
+
+'Region1Pipe3':[{
+  'distance': 857.9,
+  'videoRef': 80,
+  'descriptor': 'LR',
+  'modifier': 1,
+  'continuousDefect':'Repeating Continuous' ,
+    'sML': 'M',
+  'first': 3.3,
+  'second': 8.5,
+  'percent': 60,
+  'joint': false,
+  'at': 1,
+  'to':4,
+  'imageRef': 'NA',
+  'Remarks': 'crack'
+},{
+  'distance': 857.9,
+  'videoRef': 80,
+  'descriptor': 'LR',
+  'modifier': 1,
+  'continuousDefect':'Repeating Continuous' ,
+    'sML': 'M',
+  'first': 3.3,
+  'second': 8.5,
+  'percent': 60,
+  'joint': false,
+  'at': 1,
+  'to':4,
+  'imageRef': 'NA',
+  'Remarks': 'Tree root'
+}]
 } ;
 
 

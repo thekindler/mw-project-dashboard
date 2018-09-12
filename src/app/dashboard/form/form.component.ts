@@ -30,14 +30,14 @@ export class FormComponent implements OnInit {
 
   pipes: Pipe[] = [
     {value: 'Pipe1', viewValue: 'Pipe1'},
-    {value: 'Pipe2', viewValue: 'Pipe2'}
-    // {value: 'Pipe3', viewValue: 'Pipe3'}
+    {value: 'Pipe2', viewValue: 'Pipe2'},
+    {value: 'Pipe3', viewValue: 'Pipe3'}
   ];
   onSubmit(){
     this.resourcesLoaded = true;
 
     this.myservice.changeMessage(this.regionSelected,this.pipeSelected,true); 
-    this.httpClient.post("http://0.0.0.0:5000/process_video",
+    this.httpClient.post("http://127.0.0.1:5000/process_video",
     {
         "region": this.regionSelected,
         "pipe": this.pipeSelected

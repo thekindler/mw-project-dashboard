@@ -30,10 +30,13 @@ export interface Pipe {
   styleUrls:  ['./preview1.component.css']
 })
 export  class  PreviewComponent  implements  OnInit  {
+  inputVideo: HTMLElement ;
+  outputVideo: HTMLElement ;
   count: any ={'Region1Pipe1':{'treeroot':1,'blockage':0,'crack':0},
   'Region1Pipe2':{'treeroot':0,'blockage':0,'crack':1},
   'Region2Pipe1':{'treeroot':0,'blockage':1,'crack':0},
-  'Region2Pipe2':{'treeroot':1,'blockage':0,'crack':0}
+  'Region2Pipe2':{'treeroot':1,'blockage':0,'crack':0},
+  'Region1Pipe3':{'treeroot':1,'blockage':0,'crack':1}
 };
 
 resourcesLoaded:boolean = false;
@@ -48,8 +51,8 @@ resourcesLoaded:boolean = false;
 
   pipes: Pipe[] = [
     {value: 'Pipe1', viewValue: 'Pipe1'},
-    {value: 'Pipe2', viewValue: 'Pipe2'}
-    // {value: 'Pipe3', viewValue: 'Pipe3'}
+    {value: 'Pipe2', viewValue: 'Pipe2'},
+    {value: 'Pipe3', viewValue: 'Pipe3'}
   ];
   region:  String;
   pipe:  String;
@@ -58,7 +61,8 @@ resourcesLoaded:boolean = false;
   ngOnInit()  {
     this.data.region.subscribe(message  =>  this.region  =  message)
     this.data.pipe.subscribe(message  =>  this.pipe  =  message)
-
+    this.inputVideo = document.getElementById("inputVideo") as HTMLElement ;
+    this.outputVideo = document.getElementById("outputVideo") as HTMLElement ;
 
   }
 
@@ -69,7 +73,7 @@ resourcesLoaded:boolean = false;
   
   onSubmit(){
    this.data.showspinner(true)
-   this.httpClient.post("http://0.0.0.0:5000/process_video",
+   this.httpClient.post("http://127.0.0.1:5000/process_video",
     {
         "region": this.regionSelected,
         "pipe": this.pipeSelected
@@ -78,8 +82,8 @@ resourcesLoaded:boolean = false;
         data => {
             console.log("POST Request is successful ", data);
             this.data.changeMessage(this.regionSelected,this.pipeSelected,false);
-            document.getElementById('inputVideo').load();
-            document.getElementById('outputVideo').load();
+            this.inputVideo.setAttribute('src',"http://127.0.0.1:5000/input_video_feed");
+            this.outputVideo.setAttribute('src',"http://127.0.0.1:5000/output_video_feed");
             console.log(this.region)
         },
         error => {
