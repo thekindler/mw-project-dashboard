@@ -4,18 +4,21 @@ import * as jspdf from 'jspdf';
 import html2canvas from 'html2canvas';  
 
 export interface PACPData {
-  pipelineId: string;
   distance: number;
-  start: number;
-  end: number;
-  isContinuous: boolean;
-  defectName: string;
-  subDefectName: string;
-  inspectionRating: string;
-  quickRating: string;
-  pipeRating: string;
-  severity: string;
-  count:number;
+  videoRef: number;
+  descriptor: string;
+  modifier: number;
+  continuousDefect: string;
+  sML: string;
+  first: number;
+  second: number;
+  percent: number;
+  joint: boolean;
+  at: string;
+  to:number;
+  imageRef: string;
+  Remarks: string;
+  
 }
 
 // const ELEMENT_DATA: PACPData[] = [
@@ -36,60 +39,68 @@ export interface PACPData {
 // ];
 
 const ELEMENT_DATA: any = {'Region1Pipe1':[{
-  'pipelineId': 'R1P1',
-  'distance': 2.0,
-  'start': 2.0,
-  'end': 3.0,
-  'isContinuous': true,
-  'defectName': 'Tree Root',
-  'subDefectName': 'LR',
-  'inspectionRating': '3',
-  'quickRating': '1020314050',
-  'pipeRating': '3',
-  'severity': '3',
-  'count':1
+  'distance': 457.9,
+  'videoRef': 10,
+  'descriptor': 'LR',
+  'modifier': 1,
+  'continuousDefect':'Truly Continuous' ,
+    'sML': 'S',
+  'first': 1.3,
+  'second': 4.5,
+  'percent': 40,
+  'joint': false,
+  'at': 11,
+  'to':3,
+  'imageRef': 'NA',
+  'Remarks': 'Tree Root'
 }],
 'Region1Pipe2':[{
-  'pipelineId': 'R1P2',
-  'distance': 3.0,
-  'start': 2.0,
-  'end': 5.0,
-  'isContinuous': true,
-  'defectName': 'Crack',
-  'subDefectName': 'LR',
-  'inspectionRating': '3',
-  'quickRating': '1020314050',
-  'pipeRating': '3',
-  'severity': '3',
-  'count':1
+  'distance': 857.9,
+  'videoRef': 80,
+  'descriptor': 'LR',
+  'modifier': 1,
+  'continuousDefect':'Repeating Continuous' ,
+    'sML': 'M',
+  'first': 3.3,
+  'second': 8.5,
+  'percent': 60,
+  'joint': false,
+  'at': 1,
+  'to':4,
+  'imageRef': 'NA',
+  'Remarks': 'crack'
 }],
 'Region2Pipe1':[{
-  'pipelineId': 'R1P3',
-  'distance': 2.0,
-  'start': 2.0,
-  'end': 3.0,
-  'isContinuous': true,
-  'defectName': 'Blockage',
-  'subDefectName': 'LR',
-  'inspectionRating': '3',
-  'quickRating': '1020304150',
-  'pipeRating': '4',
-  'severity': '4',
-  'count':1
+  'distance': 150,
+  'videoRef': 60,
+  'descriptor': 'LR',
+  'modifier': 1,
+  'continuousDefect':'Truly Continuous' ,
+    'sML': 'S',
+  'first': 4.3,
+  'second': 9.5,
+  'percent': 20,
+  'joint': false,
+  'at': 11,
+  'to':4,
+  'imageRef': 'NA',
+  'Remarks': 'blockage'
 }],
 'Region2Pipe2':[{
-  'pipelineId': 'R1P4',
-  'distance': 2.0,
-  'start': 2.0,
-  'end': 4.0,
-  'isContinuous': true,
-  'defectName': 'Tree root',
-  'subDefectName': 'LR',
-  'inspectionRating': '3',
-  'quickRating': '1021304050',
-  'pipeRating': '2',
-  'severity': '2',
-  'count':1
+  'distance':234.5,
+  'videoRef': 95,
+  'descriptor': 'LR',
+  'modifier': 1,
+  'continuousDefect':'Truly Continuous' ,
+    'sML': 'L',
+  'first': 2.3,
+  'second': 4.5,
+  'percent': 30,
+  'joint': false,
+  'at': 11,
+  'to':3,
+  'imageRef': 'NA',
+  'Remarks': 'Tree Root'
 }],
 } ;
 
@@ -129,7 +140,7 @@ export class PACPDialogComponent implements OnInit {
     this.datasource = ELEMENT_DATA[this.region+this.pipe];
   }
 
-    displayedColumns: string[] = ['pipelineId', 'distance', 'start', 'end', 'isContinuous', 'defectName', 'subDefectName', 'inspectionRating', 'quickRating', 'pipeRating', 'severity'];
+    displayedColumns: string[] = ['distance', 'videoRef', 'descriptor', 'modifier', 'continuousDefect', 'sML', 'first', 'second', 'percent', 'joint', 'at','to','imageRef','Remarks'];
 
     downloadReport(event: any){
       event.preventDefault();
