@@ -1,6 +1,6 @@
 import  {  Component,  OnInit, Inject  }  from  '@angular/core';
 import  {  SwitchPreviewService  }  from  '../switch-preview.service';
-
+import { HttpClient } from "@angular/common/http";
 import {
   MatDialog,
   MatDialogConfig
@@ -53,7 +53,7 @@ resourcesLoaded:boolean = false;
   ];
   region:  String;
   pipe:  String;
-  constructor(public  data:  SwitchPreviewService, private dialog: MatDialog)  {  }
+  constructor(public  data:  SwitchPreviewService, private dialog: MatDialog,private httpClient:HttpClient)  {  }
 
   ngOnInit()  {
     this.data.region.subscribe(message  =>  this.region  =  message)
@@ -68,11 +68,23 @@ resourcesLoaded:boolean = false;
   }
   
   onSubmit(){
-
    this.data.showspinner(true)
-    setTimeout(()=>{    
-      this.data.changeMessage(this.regionSelected,this.pipeSelected,false);
-      console.log(this.region)
-    } ,5000);   
+   this.httpClient.post("http://0.0.0.0:5000/process_video",
+    {
+        "region": this.regionSelected,
+        "pipe": this.pipeSelected
+    })
+    .subscribe(
+        data => {
+            console.log("POST Request is successful ", data);
+            this.data.changeMessage(this.regionSelected,this.pipeSelected,false);
+            document.getElementById('inputVideo').load();
+            document.getElementById('outputVideo').load();
+            console.log(this.region)
+        },
+        error => {
+            console.log("Error", error);
+        }
+    );   
   }
 }
