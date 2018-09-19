@@ -51,11 +51,11 @@ resourcesLoaded:boolean = false;
 
   pipes: Pipe[] = [
     {value: 'Pipe1', viewValue: 'Pipe1'},
-    {value: 'Pipe2', viewValue: 'Pipe2'},
-    {value: 'Pipe3', viewValue: 'Pipe3'}
+    {value: 'Pipe2', viewValue: 'Pipe2'}
+//     ,{value: 'Pipe3', viewValue: 'Pipe3'}
   ];
-  region:  String;
-  pipe:  String;
+  region:  any;
+  pipe:  any;
   constructor(public  data:  SwitchPreviewService, private dialog: MatDialog,private httpClient:HttpClient)  {  }
 
   ngOnInit()  {
@@ -73,7 +73,7 @@ resourcesLoaded:boolean = false;
   
   onSubmit(){
    this.data.showspinner(true)
-   this.httpClient.post("http://127.0.0.1:5000/process_video",
+   this.httpClient.post("http://54.174.95.238:5000/process_video",
     {
         "region": this.regionSelected,
         "pipe": this.pipeSelected
@@ -82,8 +82,8 @@ resourcesLoaded:boolean = false;
         data => {
             console.log("POST Request is successful ", data);
             this.data.changeMessage(this.regionSelected,this.pipeSelected,false);
-            this.inputVideo.setAttribute('src',"http://127.0.0.1:5000/input_video_feed");
-            this.outputVideo.setAttribute('src',"http://127.0.0.1:5000/output_video_feed");
+            this.inputVideo.setAttribute('src',"http://54.174.95.238:5000/input_video_feed");
+            this.outputVideo.setAttribute('src',"http://54.174.95.238:5000/output_video_feed");
             console.log(this.region)
         },
         error => {

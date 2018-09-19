@@ -11,6 +11,7 @@ import  {  SwitchPreviewService  }  from  '../dashboard/switch-preview.serv
 export class SidebarComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
   resourceload:any;
+  isExpanded:boolean = true;
   private _mobileQueryListner: () => void;
   element: HTMLElement ;
   constructor( changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,public  data:  SwitchPreviewService) {
