@@ -37,7 +37,7 @@ export class FormComponent implements OnInit {
     this.resourcesLoaded = true;
 
     this.myservice.changeMessage(this.regionSelected,this.pipeSelected,true); 
-    this.httpClient.post("http://54.174.95.238:5000/process_video",
+    this.httpClient.post("http://34.208.106.39:5000/process_video",
     {
         "region": this.regionSelected,
         "pipe": this.pipeSelected
