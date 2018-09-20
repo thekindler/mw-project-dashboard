@@ -11,7 +11,7 @@
   <mat-card class="z-depth center" flex="50" >
     <div class="example-container">
     	<mat-form-field>
-		<mat-select placeholder="Select Region" [(value)]="regionSelected" class="region-select" >
+		<mat-select placeholder="Select Region" [(value)]="regionSelected" class="region-select" (selectionChange)="setpipes($event.value)">
 			<mat-option *ngFor="let region of regions" [value]="region.value">
 				{{region.viewValue}}
 			</mat-option>

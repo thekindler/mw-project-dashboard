@@ -1,21 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FusionChartsComponent} from './FusionCharts/fusioncharts.component';
+import { FusionChartsComponent } from './FusionCharts/fusioncharts.component';
+import {GlobalService} from './services/global.service'
 
 //import { AboutComponent } from './about/about.component';
-// import { ReportsComponent } from './reports/reports.component';
+//import { ReportsComponent } from './reports/reports.component';
 //import { ContactsComponent } from './contacts/contacts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from '@angular/common/http';
-import * as jspdf from 'jspdf';  
-  
-import html2canvas from 'html2canvas';  
+import * as jspdf from 'jspdf';
+
+import html2canvas from 'html2canvas';
 
 //Fusion Charts Dependencies
 import { FusionChartsModule } from 'angular-fusioncharts';
@@ -63,8 +64,8 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule
-  
-  
+
+
 } from '@angular/material';
 import { FormComponent } from './dashboard/form/form.component';
 import { PreviewComponent } from './dashboard/preview/preview.component';
@@ -78,7 +79,7 @@ import { OpencvResultsComponent } from './opencv-results/opencv-results.componen
 import { BlockageComponent } from './opencv-results/blockage/blockage.component';
 import { TreeRootIntrusionsComponent } from './opencv-results/tree-root-intrusions/tree-root-intrusions.component';
 import { CracksComponent } from './opencv-results/cracks/cracks.component';
-import {JointsComponent} from './opencv-results/joints/joints.component';
+import { JointsComponent } from './opencv-results/joints/joints.component';
 
 @NgModule({
   declarations: [
@@ -109,47 +110,47 @@ import {JointsComponent} from './opencv-results/joints/joints.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule,
-  FlexLayoutModule,
-  FusionChartsModule,
-  FormsModule,
-  ReactiveFormsModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+    FlexLayoutModule,
+    FusionChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
 
   ],
-  providers: [SwitchPreviewService],
+  providers: [SwitchPreviewService,GlobalService],
   entryComponents: [PACPDialogComponent],
   bootstrap: [AppComponent]
 })

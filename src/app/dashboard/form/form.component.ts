@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {DashboardComponent} from '../dashboard.component';
+import { DashboardComponent } from '../dashboard.component';
 import { SwitchPreviewService } from '../switch-preview.service';
 import { HttpClient } from "@angular/common/http";
+import { GlobalService } from './../../services/global.service';
 export interface Region {
   value: string;
   viewValue: string;
@@ -18,49 +19,43 @@ export interface Pipe {
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  constructor(private myservice: SwitchPreviewService,private httpClient:HttpClient) {}
-  resourcesLoaded:boolean = false;
-  regionSelected: any =''; 
-  pipeSelected: any =''; 
-  regions: Region[] = [
-    {value: 'Region1', viewValue: 'Region1'},
-    {value: 'Region2', viewValue: 'Region2'}
-    // {value: 'Region3', viewValue: 'Region3'}
-  ];
-
-  pipes: Pipe[] = [
-    {value: 'Pipe1', viewValue: 'Pipe1'},
-    {value: 'Pipe2', viewValue: 'Pipe2'}
-//     ,{value: 'Pipe3', viewValue: 'Pipe3'}
-  ];
-  onSubmit(){
+  constructor(private myservice: SwitchPreviewService, private httpClient: HttpClient, public global: GlobalService) { }
+  resourcesLoaded: boolean = false;
+  regionSelected: any = '';
+  pipeSelected: any = '';
+  regions: Region[] = [];
+  pipes: Pipe[] = [];
+  onSubmit() {
     this.resourcesLoaded = true;
 
-    this.myservice.changeMessage(this.regionSelected,this.pipeSelected,true); 
-    this.httpClient.post("http://34.208.106.39:5000/process_video",
-    {
+    this.myservice.changeMessage(this.regionSelected, this.pipeSelected, true);
+    this.httpClient.post(this.global.url + "/process_video",
+      {
         "region": this.regionSelected,
         "pipe": this.pipeSelected
-    })
-    .subscribe(
+      })
+      .subscribe(
         data => {
-            console.log("POST Request is successful ", data);
-            this.myservice.isAuthenticated();
-      
-            this.myservice.changeMessage(this.regionSelected,this.pipeSelected,false); 
+          console.log("POST Request is successful", data);
+          this.myservice.isAuthenticated();
+
+          this.myservice.changeMessage(this.regionSelected, this.pipeSelected, false);
         },
         error => {
-            console.log("Error", error);
+          console.log("Error", error);
         }
-    );  
-    ////////////////
-    // this.myservice.changeMessage(this.regionSelected,this.pipeSelected,true); 
-    // setTimeout(()=>{ 
-    //   this.myservice.isAuthenticated();
-      
-    //   this.myservice.changeMessage(this.regionSelected,this.pipeSelected,false); 
-    // } ,5000);  
+      );
+
   }
+
   ngOnInit() {
+    this.regions = this.global.regions
+
   }
+
+  setpipes(reg: any) {
+    this.pipes = this.global.getPipeOptions(reg)
+  }
+
+
 }

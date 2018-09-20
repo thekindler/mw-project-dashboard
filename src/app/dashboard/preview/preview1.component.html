@@ -2,7 +2,7 @@
 	<div class="regioncontainer">
 		<div class="select1">
 			<mat-form-field>
-				<mat-select placeholder="Change Region" [(value)]="regionSelected" class="region-select">
+				<mat-select placeholder="Change Region" [(value)]="regionSelected" class="region-select" (selectionChange)="setpipes($event.value)">
 					<mat-option *ngFor="let region of regions" [value]="region.value">
 						{{region.viewValue}}
 					</mat-option>
@@ -35,7 +35,7 @@
 					<mat-card-title class="textFont">Input Video</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
-					<video id = "inputVideo" class="fixedheight" src="http://34.208.106.39:5000/input_video_feed" controls autoplay>
+					<video id = "inputVideo" class="fixedheight" src={{input_feed}} controls autoplay>
 						<!-- <source  type="video/mp4"> -->
 					</video>
 				</mat-card-content>
@@ -50,7 +50,7 @@
 				</mat-card-header>
 
 				<mat-card-content>
-					<video id = "outputVideo" class="fixedheight"  src="http://34.208.106.39:5000/output_video_feed" controls autoplay>
+					<video id = "outputVideo" class="fixedheight"  src={{out_feed}} controls autoplay>
 						<!-- <source  type="video/mp4"> -->
 					</video>
 				</mat-card-content>
