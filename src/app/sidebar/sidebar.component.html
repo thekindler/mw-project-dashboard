@@ -69,6 +69,12 @@
 						</mat-icon>
 						<p matLine *ngIf="isExpanded">Contact Us</p>
 					</a>
+					<a mat-list-item routerLink="live-processing" (click)="toggleActive($event)">
+						<mat-icon mat-list-icon>
+							play_arrow
+						</mat-icon>
+						<p matLine *ngIf="isExpanded">Process Live Video</p>
+					</a>
 					<!-- <a mat-list-item routerLink="dashboard" id="dashboard" (click)="toggleActive($event)"><mat-icon>dashboard</mat-icon>&nbsp; &nbsp; Dashboard</a>
 					<a mat-list-item routerLink="reports" (click)="toggleActive($event)"><mat-icon>trending_up</mat-icon>&nbsp; &nbsp; Reports</a>
 					<a mat-list-item routerLink="reports" (click)="toggleActive($event)"><mat-icon>local_library</mat-icon>&nbsp; &nbsp;PACP</a>

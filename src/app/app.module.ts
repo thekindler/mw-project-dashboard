@@ -81,6 +81,8 @@ import { TreeRootIntrusionsComponent } from './opencv-results/tree-root-intrusio
 import { CracksComponent } from './opencv-results/cracks/cracks.component';
 import { JointsComponent } from './opencv-results/joints/joints.component';
 
+import { LiveProcessingComponent } from './live-processing/live-processing.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +100,8 @@ import { JointsComponent } from './opencv-results/joints/joints.component';
     BlockageComponent,
     TreeRootIntrusionsComponent,
     CracksComponent,
-    JointsComponent
+    JointsComponent,
+    LiveProcessingComponent
     // AboutComponent,
     // ReportsComponent,
     // ContactsComponent,
